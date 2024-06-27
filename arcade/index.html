@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darko Labs Arcade - Tetris</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            font-family: 'Orbitron', sans-serif;
+            color: #0ff;
+        }
+        #game-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #0ff;
+        }
+        canvas {
+            border: 2px solid #0ff;
+            box-shadow: 0 0 10px #0ff;
+        }
+        .score-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        #score, #high-score {
+            font-size: 24px;
+            text-shadow: 0 0 5px #0ff;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #0ff;
+        }
+        #controls {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #0aa;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Darko Labs Arcade</h1>
+        <canvas id="tetris" width="240" height="400"></canvas>
+        <div class="score-container">
+            <div id="score">Score: 0</div>
+            <div id="high-score">High Score: 0</div>
+        </div>
+        <div id="controls">
+            ← → : Move | ↑ : Rotate | ↓ : Drop
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('tetris');
+        const context = canvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+        const highScoreElement = document.getElementById('high-score');
+
+        const ROWS = 20;
+        const COLS = 12;
+        const BLOCK_SIZE = 20;
+
+        let board = Array(ROWS).fill().map(() => Array(COLS).fill(0));
+        let score = 0;
+        let highScore = 0;
+
+        const SHAPES = [
+            [[1, 1, 1, 1]],
+            [[1, 1], [1, 1]],
+            [[1, 1, 1], [0, 1, 0]],
+            [[1, 1, 1], [1, 0, 0]],
+            [[1, 1, 1], [0, 0, 1]],
+            [[1, 1, 0], [0, 1, 1]],
+            [[0, 1, 1], [1, 1, 0]]
+        ];
+
+        const COLORS = ['#0ff', '#f0f', '#ff0', '#0f0', '#f00', '#00f', '#ffa500'];
+
+        let currentShape;
+        let currentColor;
+        let currentX;
+        let currentY;
+
+        function newShape() {
+            const randomIndex = Math.floor(Math.random() * SHAPES.length);
+            currentShape = SHAPES[randomIndex];
+            currentColor = COLORS[randomIndex];
+            currentX = Math.floor(COLS / 2) - Math.floor(currentShape[0].length / 2);
+            currentY = 0;
+
+            if (collision()) {
+                alert('Game Over!\nYour score: ' + score + '\nHigh Score: ' + highScore);
+                board = Array(ROWS).fill().map(() => Array(COLS).fill(0));
+                score = 0;
+                scoreElement.textContent = 'Score: ' + score;
+                // High score is not reset
+            }
+        }
+
+        function draw() {
+            context.fillStyle = '#000';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            drawBoard();
+            drawCurrentShape();
+            drawGrid();
+        }
+
+        function drawBoard() {
+            for (let y = 0; y < ROWS; y++) {
+                for (let x = 0; x < COLS; x++) {
+                    if (board[y][x]) {
+                        context.fillStyle = board[y][x];
+                        context.fillRect(x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE - 1, BLOCK_SIZE - 1);
+                        addGlow(context, x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE - 1, BLOCK_SIZE - 1, board[y][x]);
+                    }
+                }
+            }
+        }
+
+        function drawCurrentShape() {
+            context.fillStyle = currentColor;
+            for (let y = 0; y < currentShape.length; y++) {
+                for (let x = 0; x < currentShape[y].length; x++) {
+                    if (currentShape[y][x]) {
+                        context.fillRect((currentX + x) * BLOCK_SIZE, (currentY + y) * BLOCK_SIZE, BLOCK_SIZE - 1, BLOCK_SIZE - 1);
+                        addGlow(context, (currentX + x) * BLOCK_SIZE, (currentY + y) * BLOCK_SIZE, BLOCK_SIZE - 1, BLOCK_SIZE - 1, currentColor);
+                    }
+                }
+            }
+        }
+
+        function drawGrid() {
+            context.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+            context.lineWidth = 0.5;
+            for (let y = 0; y <= ROWS; y++) {
+                context.beginPath();
+                context.moveTo(0, y * BLOCK_SIZE);
+                context.lineTo(canvas.width, y * BLOCK_SIZE);
+                context.stroke();
+            }
+            for (let x = 0; x <= COLS; x++) {
+                context.beginPath();
+                context.moveTo(x * BLOCK_SIZE, 0);
+                context.lineTo(x * BLOCK_SIZE, canvas.height);
+                context.stroke();
+            }
+        }
+
+        function addGlow(ctx, x, y, width, height, color) {
+            ctx.shadowColor = color;
+            ctx.shadowBlur = 10;
+            ctx.fillRect(x, y, width, height);
+            ctx.shadowBlur = 0;
+        }
+
+        function collision() {
+            for (let y = 0; y < currentShape.length; y++) {
+                for (let x = 0; x < currentShape[y].length; x++) {
+                    if (currentShape[y][x] &&
+                        (board[currentY + y] === undefined ||
+                         board[currentY + y][currentX + x] === undefined ||
+                         board[currentY + y][currentX + x])) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        function merge() {
+            for (let y = 0; y < currentShape.length; y++) {
+                for (let x = 0; x < currentShape[y].length; x++) {
+                    if (currentShape[y][x]) {
+                        board[currentY + y][currentX + x] = currentColor;
+                    }
+                }
+            }
+        }
+
+        function rotate() {
+            const rotated = currentShape[0].map((_, i) => currentShape.map(row => row[i])).reverse();
+            const previousShape = currentShape;
+            currentShape = rotated;
+            if (collision()) {
+                currentShape = previousShape;
+            }
+        }
+
+        function moveDown() {
+            currentY++;
+            if (collision()) {
+                currentY--;
+                merge();
+                removeFullRows();
+                newShape();
+            }
+        }
+
+        function moveLeft() {
+            currentX--;
+            if (collision()) {
+                currentX++;
+            }
+        }
+
+        function moveRight() {
+            currentX++;
+            if (collision()) {
+                currentX--;
+            }
+        }
+
+        function removeFullRows() {
+            for (let y = ROWS - 1; y >= 0; y--) {
+                if (board[y].every(cell => cell !== 0)) {
+                    board.splice(y, 1);
+                    board.unshift(Array(COLS).fill(0));
+                    score += 10;
+                    if (score > highScore) {
+                        highScore = score;
+                        highScoreElement.textContent = 'High Score: ' + highScore;
+                    }
+                    scoreElement.textContent = 'Score: ' + score;
+                }
+            }
+        }
+
+        document.addEventListener('keydown', event => {
+            switch(event.keyCode) {
+                case 37: // Left arrow
+                    moveLeft();
+                    break;
+                case 39: // Right arrow
+                    moveRight();
+                    break;
+                case 40: // Down arrow
+                    moveDown();
+                    break;
+                case 38: // Up arrow
+                    rotate();
+                    break;
+            }
+            draw();
+        });
+
+        newShape();
+        setInterval(() => {
+            moveDown();
+            draw();
+        }, 500);
+
+        draw();
+    </script>
+</body>
+</html>
