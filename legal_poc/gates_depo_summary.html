@@ -232,5 +232,141 @@
             <td>266-271</td>
         </tr>
     </table>
+
+
+        <div class="chart-container">
+            <canvas id="chart1"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chart2"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chart3"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chart4"></canvas>
+        </div>
+
+    </div> <!-- end of #deposition-content -->
+
+    <script>
+        // Chart 1: Browser Market Share Timeline
+        const ctx1 = document.getElementById('chart1').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: [1995, 1996, 1997, 1998],
+                datasets: [
+                    { label: 'Netscape', data: [90, 80, 60, 40], borderColor: '#000', fill: false },
+                    { label: 'Mosaic', data: [10, 5, 2, 1], borderColor: '#888', borderDash: [5, 5], fill: false },
+                    { label: 'IE', data: [0, 15, 38, 59], borderColor: '#999', fill: false }
+                ]
+            },
+            options: {
+                scales: {
+                    x: { type: 'linear', position: 'bottom' },
+                    y: { beginAtZero: true }
+                },
+                plugins: {
+                    tooltip: { mode: 'index', intersect: false },
+                    title: { display: true, text: 'Browser Market Share 1995-1998' }
+                }
+            }
+        });
+
+        // Chart 2: Microsoft Revenue Breakdown
+        const ctx2 = document.getElementById('chart2').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Operating Systems', 'Browser-related', 'Other'],
+                datasets: [
+                    { label: 'Revenue (in millions USD)', data: [6000, 200, 2400], backgroundColor: '#333' }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: { beginAtZero: true }
+                },
+                plugins: {
+                    tooltip: { mode: 'index', intersect: false },
+                    title: { display: true, text: 'Microsoft Revenue Breakdown 1996' }
+                }
+            }
+        });
+
+        // Chart 3: Netscape Revenue Sources
+        const ctx3 = document.getElementById('chart3').getContext('2d');
+        const data1996 = [
+            { label: 'Browser Sales', value: 45 },
+            { label: 'Server Software', value: 30 },
+            { label: 'Other', value: 15 }
+        ];
+        const data1997 = [
+            { label: 'Browser Sales', value: 30 },
+            { label: 'Server Software', value: 40 },
+            { label: 'Advertising', value: 20 },
+            { label: 'Other', value: 10 }
+        ];
+        let currentYear = 1996;
+        let data = data1996;
+
+        const chart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: data.map(d => d.name),
+                datasets: [
+                    { label: 'Revenue (in millions USD)', data: data.map(d => d.value), backgroundColor: '#333' }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: { beginAtZero: true }
+                },
+                plugins: {
+                    tooltip: { mode: 'index', intersect: false },
+                    title: { display: true, text: 'Netscape Revenue Sources' }
+                }
+            }
+        });
+
+        document.getElementById('chart3').addEventListener('click', () => {
+            currentYear = currentYear === 1996 ? 1997 : 1996;
+            data = currentYear === 1996 ? data1996 : data1997;
+            chart3.data.labels = data.map(d => d.name);
+            chart3.data.datasets[0].data = data.map(d => d.value);
+            chart3.update();
+        });
+
+        // Chart 4: Browser Development Timeline
+        const ctx4 = document.getElementById('chart4').getContext('2d');
+        new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: [1993, 1994, 1995, 1996],
+                datasets: [
+                    { label: 'Mosaic', data: [1993, null, null, null], borderColor: '#333', fill: false },
+                    { label: 'Netscape Navigator', data: [null, 1994, null, null], borderColor: '#444', fill: false },
+                    { label: 'Internet Explorer 1.0', data: [null, null, 1995, null], borderColor: '#555', fill: false },
+                    { label: 'IE 3.0', data: [null, null, null, 1996], borderColor: '#666', fill: false }
+                ]
+            },
+            options: {
+                scales: {
+                    x: { type: 'linear', position: 'bottom', beginAtZero: false },
+                    y: { ticks: { beginAtZero: false, stepSize: 1 } }
+                },
+                plugins: {
+                    tooltip: { mode: 'index', intersect: false },
+                    title: { display: true, text: 'Browser Development Timeline (1993-1996)' }
+                }
+            }
+        });
+    </script>
+
+    <div class="source">Source: Deposition transcript</div>
+    
 </body>
 </html>
