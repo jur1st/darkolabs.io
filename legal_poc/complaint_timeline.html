@@ -1,1 +1,167 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+    <title>Tufte-Inspired Minimalist Timeline</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=ETBembo:wght@400;700&display=swap');
+        html {
+            font-size: 1rem;
+        }
+        body {
+            font-family: 'ETBembo', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+            background-color: #fffff8;
+            color: #111;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: #111;
+            text-align: center;
+        }
+        .timeline {
+            border-left: 1px solid #c44;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+        .event {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .event::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #fffff8;
+            border: 1px solid #c44;
+            border-radius: 50%;
+            position: absolute;
+            left: -26px;
+            top: 5px;
+        }
+        .date {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #c44;
+        }
+        .description {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Microsoft Antitrust Case Timeline</h1>
+    <div class="timeline">
+        <div class="event">
+            <span class="date">Pre-1995:</span>
+            <span class="description">Microsoft establishes and maintains a monopoly share (over 80%) in the PC operating system market</span>
+        </div>
+        <div class="event">
+            <span class="date">1994:</span>
+            <span class="description">Netscape Navigator is introduced and becomes the first widely used Internet browser</span>
+        </div>
+        <div class="event">
+            <span class="date">July 1995:</span>
+            <span class="description">Microsoft releases Internet Explorer 1.0</span>
+        </div>
+        <div class="event">
+            <span class="date">May 1995:</span>
+            <span class="description">Microsoft executives meet with Netscape and allegedly attempt to divide the browser market</span>
+        </div>
+        <div class="event">
+            <span class="date">August 1995:</span>
+            <span class="description">Microsoft releases Windows 95</span>
+        </div>
+        <div class="event">
+            <span class="date">Late 1995:</span>
+            <span class="description">Microsoft recognizes the threat posed by Netscape's browser and Sun's Java technologies</span>
+        </div>
+        <div class="event">
+            <span class="date">Early 1996:</span>
+            <span class="description">Microsoft begins offering Internet Explorer to Internet Access Providers (IAPs) for free</span>
+        </div>
+        <div class="event">
+            <span class="date">Spring 1996:</span>
+            <span class="description">Microsoft starts negotiations with Compaq to include Internet Explorer on Presario computers</span>
+        </div>
+        <div class="event">
+            <span class="date">May 1996:</span>
+            <span class="description">Microsoft allegedly threatens to terminate Compaq's Windows 95 license over Internet Explorer icon removal</span>
+        </div>
+        <div class="event">
+            <span class="date">June 1996:</span>
+            <span class="description">Compaq restores the MSN and Internet Explorer icons to the Presario desktop</span>
+        </div>
+        <div class="event">
+            <span class="date">Summer 1996:</span>
+            <span class="description">Microsoft introduces the Internet Explorer Access Kit (IEAK) for IAPs</span>
+        </div>
+        <div class="event">
+            <span class="date">July 1996:</span>
+            <span class="description">Microsoft enters into an agreement with AOL to make Internet Explorer the default browser</span>
+        </div>
+        <div class="event">
+            <span class="date">August 1996:</span>
+            <span class="description">Microsoft imposes restrictions on OEMs' ability to modify the Windows 95 boot-up sequence</span>
+        </div>
+        <div class="event">
+            <span class="date">Fall 1996:</span>
+            <span class="description">Microsoft introduces the Active Desktop and Online Services Folder in Windows</span>
+        </div>
+        <div class="event">
+            <span class="date">Late 1996:</span>
+            <span class="description">Microsoft integrates Internet Explorer more deeply into Windows operating system</span>
+        </div>
+        <div class="event">
+            <span class="date">1996-1997:</span>
+            <span class="description">Microsoft enters into restrictive agreements with Internet Content Providers (ICPs)</span>
+        </div>
+        <div class="event">
+            <span class="date">January 1997:</span>
+            <span class="description">Microsoft allegedly pressures Intel to stop developing platform-level software that could support Navigator</span>
+        </div>
+        <div class="event">
+            <span class="date">Mid-1997:</span>
+            <span class="description">Microsoft enters into agreements with ICPs for channel placement in Internet Explorer 4.0</span>
+        </div>
+        <div class="event">
+            <span class="date">September 1997:</span>
+            <span class="description">Microsoft releases Internet Explorer 4.0</span>
+        </div>
+        <div class="event">
+            <span class="date">October 1997:</span>
+            <span class="description">DOJ files a petition for contempt against Microsoft for alleged violation of 1995 consent decree</span>
+        </div>
+        <div class="event">
+            <span class="date">December 1997:</span>
+            <span class="description">Court issues preliminary injunction against Microsoft tying Internet Explorer to Windows 95</span>
+        </div>
+        <div class="event">
+            <span class="date">Early 1998:</span>
+            <span class="description">Microsoft's share of the browser market reaches approximately 50%, up from less than 5% in early 1996</span>
+        </div>
+        <div class="event">
+            <span class="date">April 1998:</span>
+            <span class="description">Microsoft modifies some of its agreements with ISPs, but not with Online Service Providers</span>
+        </div>
+        <div class="event">
+            <span class="date">May 1998:</span>
+            <span class="description">Court of Appeals stays the December 1997 preliminary injunction as it applies to Windows 98</span>
+        </div>
+        <div class="event">
+            <span class="date">June 1998:</span>
+            <span class="description">Anticipated release of Windows 98 with integrated Internet Explorer</span>
+        </div>
+    </div>
+</body>
+</html>
