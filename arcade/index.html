@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darko Labs Arcade - Tetris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -11,20 +12,23 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #000;
-            font-family: 'Orbitron', sans-serif;
-            color: #0ff;
+            background-color: #001a33;
+            font-family: 'Roboto', sans-serif;
+            color: #00ffff;
         }
         #game-container {
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 10, 20, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 20px #0ff;
+            box-shadow: 0 0 20px #00ffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
         }
         canvas {
-            border: 2px solid #0ff;
-            box-shadow: 0 0 10px #0ff;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 10px #00ffff;
         }
         .score-container {
             display: flex;
@@ -32,36 +36,103 @@
             margin-top: 20px;
         }
         #score, #high-score {
-            font-size: 24px;
-            text-shadow: 0 0 5px #0ff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            text-shadow: 0 0 5px #00ffff;
         }
         h1 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 36px;
             margin-bottom: 20px;
-            text-shadow: 0 0 10px #0ff;
+            text-shadow: 0 0 10px #00ffff;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
         #controls {
             margin-top: 20px;
             font-size: 14px;
-            color: #0aa;
+            color: #0080ff;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .control-key {
+            display: inline-block;
+            background-color: rgba(0, 255, 255, 0.1);
+            border: 1px solid #00ffff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 5px #00ffff;
+        }
+        #mobile-controls {
+            display: none;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .control-btn {
+            background-color: rgba(0, 255, 255, 0.2);
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 10px #00ffff;
+        }
+        .control-btn:active {
+            background-color: rgba(0, 255, 255, 0.5);
+            box-shadow: 0 0 20px #00ffff;
+        }
+        footer {
+            margin-top: auto;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #0080ff;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 5px #0080ff;
+        }
+        @media (max-width: 768px) {
+            #mobile-controls {
+                display: flex;
+            }
+            #controls {
+                display: none;
+            }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="game-container">
-        <h1>Darko Labs Arcade</h1>
+        <h1>DARKO LABS ARCADE</h1>
         <canvas id="tetris" width="240" height="400"></canvas>
         <div class="score-container">
             <div id="score">Score: 0</div>
             <div id="high-score">High Score: 0</div>
         </div>
         <div id="controls">
-            ← → : Move | ↑ : Rotate | ↓ : Drop
+            <span class="control-key">←→ Move</span>
+            <span class="control-key">↑ Rotate</span>
+            <span class="control-key">↓ Drop</span>
         </div>
+        <div id="mobile-controls">
+            <button class="control-btn" id="left-btn">←</button>
+            <button class="control-btn" id="rotate-btn">↑</button>
+            <button class="control-btn" id="right-btn">→</button>
+            <button class="control-btn" id="drop-btn">↓</button>
+        </div>
+        <footer>Created by John Benson</footer>
     </div>
 
     <script>
+        // (The JavaScript code remains unchanged)
         const canvas = document.getElementById('tetris');
         const context = canvas.getContext('2d');
         const scoreElement = document.getElementById('score');
@@ -85,7 +156,15 @@
             [[0, 1, 1], [1, 1, 0]]
         ];
 
-        const COLORS = ['#0ff', '#f0f', '#ff0', '#0f0', '#f00', '#00f', '#ffa500'];
+        const COLORS = [
+            '#00ffff',  // Cyan
+            '#0080ff',  // Light Blue
+            '#0040ff',  // Blue
+            '#00cccc',  // Teal
+            '#ffa500',  // Amber (accent color)
+            '#008080',  // Dark Cyan
+            '#4169e1'   // Royal Blue
+        ];
 
         let currentShape;
         let currentColor;
@@ -104,12 +183,11 @@
                 board = Array(ROWS).fill().map(() => Array(COLS).fill(0));
                 score = 0;
                 scoreElement.textContent = 'Score: ' + score;
-                // High score is not reset
             }
         }
 
         function draw() {
-            context.fillStyle = '#000';
+            context.fillStyle = '#001a33';  // Dark blue background
             context.fillRect(0, 0, canvas.width, canvas.height);
 
             drawBoard();
@@ -237,7 +315,9 @@
             }
         }
 
-        document.addEventListener('keydown', event => {
+        document.addEventListener('keydown', handleKeyPress);
+
+        function handleKeyPress(event) {
             switch(event.keyCode) {
                 case 37: // Left arrow
                     moveLeft();
@@ -253,7 +333,13 @@
                     break;
             }
             draw();
-        });
+        }
+
+        // Mobile controls
+        document.getElementById('left-btn').addEventListener('touchstart', moveLeft);
+        document.getElementById('right-btn').addEventListener('touchstart', moveRight);
+        document.getElementById('rotate-btn').addEventListener('touchstart', rotate);
+        document.getElementById('drop-btn').addEventListener('touchstart', moveDown);
 
         newShape();
         setInterval(() => {
