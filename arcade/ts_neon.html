@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Surrounder 2.0 EXTREME</title>
+    <style>
+        @keyframes neon-flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 
+                    -0.2rem -0.2rem 1rem #fff,
+                    0.2rem 0.2rem 1rem #fff,
+                    0 0 2rem #f40,
+                    0 0 4rem #f40,
+                    0 0 6rem #f40,
+                    0 0 8rem #f40,
+                    0 0 10rem #f40;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
+        @keyframes psychedelic-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body {
+            font-family: 'Impact', sans-serif;
+            background: linear-gradient(270deg, #ff00ff, #00ffff, #ffff00);
+            background-size: 600% 600%;
+            animation: psychedelic-bg 20s ease infinite;
+            color: #fff;
+            line-height: 1.6;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #00ff00;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+            animation: psychedelic-bg 10s linear infinite;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 60px;
+            text-align: center;
+            color: #ff00ff;
+            margin-bottom: 20px;
+            position: relative;
+            animation: neon-flicker 1.5s infinite alternate;
+        }
+        h1::after {
+            content: '2.0';
+            position: absolute;
+            top: -20px;
+            left: 100%;
+            margin-left: -40px;
+            font-size: 36px;
+            background: #ff00ff;
+            color: #00ffff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            transform: rotate(15deg);
+            box-shadow: 0 0 20px #ff00ff;
+            animation: neon-flicker 2s infinite alternate;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 3px solid #00ffff;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+        .button-group {
+            text-align: center;
+        }
+        button {
+            background: linear-gradient(to bottom, #ff00ff, #ff00aa);
+            color: #00ffff;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 10px;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.7);
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: skew(-5deg);
+        }
+        button:hover {
+            background: linear-gradient(to bottom, #ff33ff, #ff33aa);
+            transform: translateY(-5px) skew(-5deg);
+            box-shadow: 0 5px 40px rgba(255, 0, 255, 0.9);
+        }
+        #stats {
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+            font-size: 24px;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Term Surrounder</h1>
+        <p>Easily surround each line of your search terms with quotes. Perfect for preparing precise search queries. Paste your terms (one per line), click to add quotes, and copy the result. All processing happens in your browser - no data is transferred.</p>
+        <textarea id="input" placeholder="Enter your terms here, one per line"></textarea>
+        <div class="button-group">
+            <button onclick="surroundWithQuotes()">Surround with Quotes</button>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+        <div id="stats"></div>
+    </div>
+
+    <script>
+        function surroundWithQuotes() {
+            const input = document.getElementById('input');
+            const lines = input.value.split('\n');
+            const surroundedLines = lines.map(line => `"${line.trim()}"`);
+            input.value = surroundedLines.join('\n');
+            updateStats();
+        }
+
+        function copyToClipboard() {
+            const input = document.getElementById('input');
+            input.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        }
+
+        function updateStats() {
+            const input = document.getElementById('input');
+            const lines = input.value.split('\n').filter(line => line.trim() !== '');
+            const stats = document.getElementById('stats');
+            stats.textContent = `${lines.length} term${lines.length !== 1 ? 's' : ''} processed`;
+        }
+
+        document.getElementById('input').addEventListener('input', updateStats);
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Surrounder - Cyberpunk Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px,0) skew(0deg); }
+            4%, 60% { transform: translate(-2px,0) skew(0deg); }
+            62% { transform: translate(0,0) skew(5deg); }
+        }
+
+        @keyframes scanner {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(100%); }
+        }
+
+        @keyframes matrixRain {
+            0% { top: -50%; }
+            100% { top: 110%; }
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #00FFFF;
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .matrix-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .matrix-column {
+            position: absolute;
+            top: -50%;
+            font-size: 1.5em;
+            animation: matrixRain 20s linear infinite;
+            color: #00FFFF;
+            text-shadow: 0 0 5px #00FFFF;
+            white-space: nowrap;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00FFFF;
+            border-radius: 10px;
+            padding: 30px;
+            width: 80vw;
+            max-width: 1000px;
+            box-shadow: 0 0 30px #00FFFF, inset 0 0 20px #00FFFF;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(0, 255, 255, 0.06), rgba(0, 255, 255, 0.02), rgba(0, 255, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF00FF;
+            text-shadow: 3px 3px 0 #00FFFF, -3px -3px 0 #00FFFF;
+            margin-bottom: 30px;
+            font-size: 3em;
+            animation: glitch 1s infinite;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00FFFF;
+            color: #00FFFF;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 18px;
+            padding: 15px;
+            margin-bottom: 20px;
+            resize: vertical;
+            box-shadow: 0 0 10px #00FFFF;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: rgba(0, 255, 255, 0.1);
+            color: #00FFFF;
+            border: 2px solid #00FFFF;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            width: 45%;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background-color: #00FFFF;
+            animation: scanner 2s linear infinite;
+        }
+
+        button:hover {
+            background-color: rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 20px #00FFFF;
+        }
+
+        #stats {
+            text-align: center;
+            color: #FF00FF;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .hud {
+            position: absolute;
+            font-size: 14px;
+            color: #00FFFF;
+        }
+
+        .hud-top-left { top: 15px; left: 15px; }
+        .hud-top-right { top: 15px; right: 15px; }
+        .hud-bottom-left { bottom: 15px; left: 15px; }
+        .hud-bottom-right { bottom: 15px; right: 15px; }
+    </style>
+</head>
+<body>
+    <div class="matrix-background"></div>
+    <div class="container">
+        <div class="hud hud-top-left">SYS://READY</div>
+        <div class="hud hud-top-right">MEM: 64K</div>
+        <div class="hud hud-bottom-left">CPU: 100%</div>
+        <div class="hud hud-bottom-right">NET: ACTIVE</div>
+        <h1>TERM SURROUNDER</h1>
+        <textarea id="inputText" placeholder="ENTER SEARCH TERMS..."></textarea>
+        <div class="button-group">
+            <button id="surroundButton">SURROUND</button>
+            <button id="copyButton">COPY</button>
+        </div>
+        <div id="stats"></div>
+    </div>
+
+    <script>
+        // Matrix rain effect
+        function createMatrixRain() {
+            const matrixChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+            const matrixBackground = document.querySelector('.matrix-background');
+            const columns = Math.floor(window.innerWidth / 20);
+
+            for (let i = 0; i < columns; i++) {
+                let column = document.createElement('div');
+                column.classList.add('matrix-column');
+                column.style.left = i * 20 + 'px';
+                column.style.animationDelay = Math.random() * 20 + 's';
+                column.innerHTML = Array.from({length: 50}, () => matrixChars[Math.floor(Math.random() * matrixChars.length)]).join('<br>');
+                matrixBackground.appendChild(column);
+            }
+        }
+
+        createMatrixRain();
+
+        // Term Surrounder functionality
+        const inputText = document.getElementById('inputText');
+        const surroundButton = document.getElementById('surroundButton');
+        const copyButton = document.getElementById('copyButton');
+        const stats = document.getElementById('stats');
+
+        surroundButton.addEventListener('click', () => {
+            const lines = inputText.value.split('\n');
+            const surroundedLines = lines.map(line => `"${line.trim()}"`).join('\n');
+            inputText.value = surroundedLines;
+            updateStats();
+        });
+
+        copyButton.addEventListener('click', () => {
+            inputText.select();
+            document.execCommand('copy');
+            copyButton.textContent = 'COPIED!';
+            setTimeout(() => {
+                copyButton.textContent = 'COPY';
+            }, 2000);
+        });
+
+        inputText.addEventListener('input', updateStats);
+
+        function updateStats() {
+            const text = inputText.value;
+            const lineCount = text.split('\n').filter(line => line.trim().length > 0).length;
+            const charCount = text.length;
+            stats.textContent = `LINES: ${lineCount} | CHARS: ${charCount}`;
+        }
+
+        // Glitch effect
+        function applyGlitchEffect() {
+            const container = document.querySelector('.container');
+            container.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px) skew(${Math.random() * 2 - 1}deg)`;
+            setTimeout(() => {
+                container.style.transform = 'none';
+            }, 50);
+        }
+
+        setInterval(applyGlitchEffect, 3000);
+    </script>
+</body>
+</html>
