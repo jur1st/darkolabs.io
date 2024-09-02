@@ -15,5 +15,12 @@
       <guid>http://192.168.1.206:1313/arcade/tetris/</guid>
       <description> The week that Claude 3.5 was released and it introduced the artifacts feature, I built a web based version of tetris while waiting for someone to call me back.&#xA;You can play the working version here..&#xA;┌────────────────┐ │ ▓▓ │ │ ▓▓▓▓ │ │ ▓▓ │ │ │ │ ░░ │ │ ░░░░ │ │ │ │ ██ │ │ ██ │ │ │ │ ▒▒ │ │ ▒▒▒▒ │ │ │ │ ░░░░ ▓▓▓▓ ████ │ │ ░░░░ ▓▓▓▓ ████ │ └────────────────┘ SCORE 0 HIGH 0 ←→ ↑ ↓ </description>
     </item>
+    <item>
+      <title>EMC-2 Capture the Flag</title>
+      <link>http://192.168.1.206:1313/arcade/ctf0/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.206:1313/arcade/ctf0/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

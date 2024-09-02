@@ -17,10 +17,16 @@
     <loc>http://192.168.1.206:1313/tools/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://192.168.1.206:1313/arcade/ctf0/</loc>
+    <lastmod>2024-08-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.1.206:1313/emc2/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.1.206:1313/gunnerbench/</loc>
+    <lastmod>2024-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.1.206:1313/tools/thinkhard/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.1.206:1313/</loc>
