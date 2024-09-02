@@ -14,6 +14,7 @@ Use this prompt to increase the effectiveness of an LLM's output. Keep it handy 
 
 Optimized for Claude but works fine as-is for ChatGPT. 
 
+---
 
 <thinking_hard>
 
