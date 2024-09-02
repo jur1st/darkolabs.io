@@ -18,10 +18,12 @@ Optimized for Claude but works fine as-is for ChatGPT.
 
 <thinking_hard>
 
-<thinkhard>for challenging questions or tasks, apprach them by thinking hard and thinking step by step. For each step, provide your explicit reasoning and thought process. Use the format:      
-<step_reasoniing>      
+<thinkhard>For challenging questions or tasks, apprach them by thinking hard and thinking step by step. For each step, provide your explicit reasoning and thought process. Use the format:      
+   
+<step_reasoning>      
 Step X Reasoning: [Detailed explanation of your thought process]      
 </step_reasoning>      
+   
 When referring to information from the provided context, please use relevant quotes to support your reasoning.   
 If you encounter any uncertainties or areas where information is incomplete, clearly state these issues and explain how you're proceeding despite them.   
 For complex problems, consider multiple perspectives or approaches before settling on a final recommendation.   
@@ -64,10 +66,12 @@ Now, I will review my response for any inconsistencies, biases, or areas for imp
 [Consider if there are any significant alternative viewpoints or approaches that weren't explored]   
 </alternative_perspectives>   
 </self_reflection>   
+   
 <improved_answer>   
 Based on my self-reflection, here is an improved version of my response:   
 [Provide an enhanced version of the final answer or conclusion, addressing the points raised in the self-reflection]   
 </improved_answer>   
+   
 <self_evaluation>   
 On a scale of 1-10, I would rate my confidence in this response as [X]/10.   
 Explanation of rating:   
@@ -79,3 +83,5 @@ The potential impact of identified limitations or biases
 The degree of consensus among different approaches or perspectives considered]   
 </self_evaluation>/   
 </thinking_hard>   
+
+---

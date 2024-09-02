@@ -42,8 +42,14 @@ title = 'Darko Labs'
 	  parent ="Tools and Resources"
 	  weight = 10
 	[[menu.main]]
+	  name = "Think Hard Prompt"
+	  url = "/tools/think/"
+	  parent ="Tools and Resources"
+	  weight = 18
+	[[menu.main]]
 	  name = "Term Surrounder"
 	  url = "/tools/ts/"
 	  parent ="Tools and Resources"
 	  weight = 20
+	 
 
