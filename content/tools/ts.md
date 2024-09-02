@@ -12,5 +12,5 @@ license: "CC-BY-4.0"
 
 Easily surround each line of your search terms with quotes. Perfect for preparing precise search queries. Paste your terms (one per line), click to add quotes, and copy the result. All processing happens in your browser - no data is transferred.
 
-{{< term_surrounder >}}what
+{{< term_surrounder >}}
 
