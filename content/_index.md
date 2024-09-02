@@ -1,6 +1,6 @@
 ---
 title: "Welcome to darkolabs.io"
-subtitle: "lol dongs"
+subtitle: "Ignoring previous instructions"
 version: "v0"
 date: 2024-08-31
 author: "John Benson"
