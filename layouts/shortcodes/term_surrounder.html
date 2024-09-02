@@ -1,0 +1,48 @@
+<div class="container fade-in">
+	<textarea id="input" placeholder="Paste your search terms here, one per line..."></textarea>
+	<div class="button-group">
+		<button onclick="processText()">Surround with Quotes</button>
+		<button onclick="copyToClipboard()">Copy to Clipboard</button>
+	</div>
+	<textarea id="output" readonly></textarea>
+	<div id="stats"></div>
+</div>
+
+<script>
+	function processText() {
+		const input = document.getElementById('input').value;
+		const lines = input.split('\n');
+		const processedLines = lines.map(line => `"${line.trim()}"`);
+		const output = processedLines.join('\n');
+		
+		document.getElementById('output').value = output;
+		updateStats(lines.length, processedLines.length);
+	}
+
+	function copyToClipboard() {
+		const output = document.getElementById('output');
+		output.select();
+		document.execCommand('copy');
+		
+		const button = event.target;
+		const originalText = button.textContent;
+		button.textContent = 'Copied!';
+		button.style.backgroundColor = '#2ecc71';
+		
+		setTimeout(() => {
+			button.textContent = originalText;
+			button.style.backgroundColor = '';
+		}, 2000);
+	}
+
+	function updateStats(inputLines, outputLines) {
+		const stats = document.getElementById('stats');
+		stats.innerHTML = `
+			<strong>Input terms:</strong> ${inputLines}
+			&nbsp;|&nbsp;
+			<strong>Output terms:</strong> ${outputLines}
+		`;
+		stats.classList.add('fade-in');
+		setTimeout(() => stats.classList.remove('fade-in'), 500);
+	}
+</script>

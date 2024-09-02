@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo {{ hugo.Version }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "css/reset.css" | relURL }}" />
+  <link rel="stylesheet" href="{{ "css/index.css" | relURL }}" />
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
+  <header>
+
+	
+	{{ block "header" . }}
+	<table class="header">
+	  <tr>
+		<td colspan="2" rowspan="2" class="width-auto">
+		  <h1 class="title">{{ .Title }}</h1>
+		  {{ with .Params.subtitle }}<span class="subtitle">{{ . }}</span>{{ end }}
+		</td>
+		<th>Version</th>
+		<td class="width-min">{{ .Params.version }}</td>
+	  </tr>
+	  <tr>
+		<th>Updated</th>
+		<td class="width-min"><time style="white-space: pre;">{{ .Date.Format "2006-01-02" }}</time></td>
+	  </tr>
+	  <tr>
+		<th class="width-min">Author</th>
+		<td class="width-auto"><a href="{{ .Params.authorUrl }}"><cite>{{ .Params.author }}</cite></a></td>
+		<th class="width-min">License</th>
+		<td>{{ .Params.license }}</td>
+	  </tr>
+	</table>
+	{{ end }}
+	
+	{{ if not .IsHome }}
+	<nav>
+	  {{ partial "menu.html" . }}
+	</nav>
+	{{ end }}
+
+  </header>
+
+  <main>
+	{{ block "main" . }}{{ end }}
+  </main>
+
+  {{ block "footer" . }}
+  <div class="debug-grid"></div>
+  <script src="{{ "js/index.js" | relURL }}"></script>
+  {{ end }}
+</body>
+</html>

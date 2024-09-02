@@ -1,0 +1,49 @@
+baseURL = 'https://darkolabs.io/'
+languageCode = 'en-us'
+title = 'Darko Labs'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+	customCSS = ["css/tetris.css"]
+
+[menu]
+	[[menu.main]]
+	  name = "Home"
+	  url = "/"
+	  weight = 1
+	[[menu.main]]
+	  name = "Arcade"
+	  url = "/arcade/"
+	  weight = 3
+	[[menu.main]]
+	  name = "Tetris"
+	  url = "/arcade/tetris"
+	  weight = 10
+	  parent="Arcade"
+	[[menu.main]]
+		name = "EMC2-CTF-0"
+		url = "/arcade/ctf0"
+		weight = 20
+		parent="Arcade"
+	[[menu.main]]
+	  name = "Tools and Resources"
+	  url = "/tools/"
+	  weight = 6
+	[[menu.main]]
+	  name = "EMC2"
+	  url = "/emc2/"
+	  parent ="Tools and Resources"
+	  weight = 5
+	[[menu.main]]
+	  name = "Gunnerbench"
+	  url = "/gunnerbench/"
+	  parent ="Tools and Resources"
+	  weight = 10
+	[[menu.main]]
+	  name = "Term Surrounder"
+	  url = "/tools/ts/"
+	  parent ="Tools and Resources"
+	  weight = 20
+

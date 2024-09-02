@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.133.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Darko Labs Term Surrounder</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  
+</head>
+<body>
+  <header>
+
+	
+	
+	<table class="header">
+	  <tr>
+		<td colspan="2" rowspan="2" class="width-auto">
+		  <h1 class="title">Darko Labs Term Surrounder</h1>
+		  <span class="subtitle">In Browser Text Manipulation</span>
+		</td>
+		<th>Version</th>
+		<td class="width-min">v1</td>
+	  </tr>
+	  <tr>
+		<th>Updated</th>
+		<td class="width-min"><time style="white-space: pre;">2024-08-31</time></td>
+	  </tr>
+	  <tr>
+		<th class="width-min">Author</th>
+		<td class="width-auto"><a href="https://john-benson.com"><cite>John Benson</cite></a></td>
+		<th class="width-min">License</th>
+		<td>CC-BY-4.0</td>
+	  </tr>
+	</table>
+	
+	
+	
+	<nav>
+	  <nav>
+  <ul>
+	
+	  <li><a href="/">Home</a></li>
+	
+	  <li><a href="/arcade/">Arcade</a></li>
+	
+	  <li><a href="/tools/">Tools and Resources</a></li>
+	
+  </ul>
+</nav>
+
+	</nav>
+	
+
+  </header>
+
+  <main>
+	
+<article>
+  <h1 id="term-surrounder">Term Surrounder</h1>
+<p>Easily surround each line of your search terms with quotes. Perfect for preparing precise search queries. Paste your terms (one per line), click to add quotes, and copy the result. All processing happens in your browser - no data is transferred.</p>
+<p><div class="container fade-in">
+	<textarea id="input" placeholder="Paste your search terms here, one per line..."></textarea>
+	<div class="button-group">
+		<button onclick="processText()">Surround with Quotes</button>
+		<button onclick="copyToClipboard()">Copy to Clipboard</button>
+	</div>
+	<textarea id="output" readonly></textarea>
+	<div id="stats"></div>
+</div>
+
+<script>
+	function processText() {
+		const input = document.getElementById('input').value;
+		const lines = input.split('\n');
+		const processedLines = lines.map(line => `"${line.trim()}"`);
+		const output = processedLines.join('\n');
+		
+		document.getElementById('output').value = output;
+		updateStats(lines.length, processedLines.length);
+	}
+
+	function copyToClipboard() {
+		const output = document.getElementById('output');
+		output.select();
+		document.execCommand('copy');
+		
+		const button = event.target;
+		const originalText = button.textContent;
+		button.textContent = 'Copied!';
+		button.style.backgroundColor = '#2ecc71';
+		
+		setTimeout(() => {
+			button.textContent = originalText;
+			button.style.backgroundColor = '';
+		}, 2000);
+	}
+
+	function updateStats(inputLines, outputLines) {
+		const stats = document.getElementById('stats');
+		stats.innerHTML = `
+			<strong>Input terms:</strong> ${inputLines}
+			&nbsp;|&nbsp;
+			<strong>Output terms:</strong> ${outputLines}
+		`;
+		stats.classList.add('fade-in');
+		setTimeout(() => stats.classList.remove('fade-in'), 500);
+	}
+</script>
+what</p>
+
+</article>
+
+  </main>
+
+  
+  <div class="debug-grid"></div>
+  <script src="/js/index.js"></script>
+  
+</body>
+</html>

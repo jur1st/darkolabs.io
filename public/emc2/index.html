@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.133.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>EMC-2 Sample Dataset</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  
+</head>
+<body>
+  <header>
+
+	
+	
+	<table class="header">
+	  <tr>
+		<td colspan="2" rowspan="2" class="width-auto">
+		  <h1 class="title">EMC-2 Sample Dataset</h1>
+		  <span class="subtitle">A synthetic, narrative-driven alternative to Enron data</span>
+		</td>
+		<th>Version</th>
+		<td class="width-min">v1</td>
+	  </tr>
+	  <tr>
+		<th>Updated</th>
+		<td class="width-min"><time style="white-space: pre;">2024-08-31</time></td>
+	  </tr>
+	  <tr>
+		<th class="width-min">Author</th>
+		<td class="width-auto"><a href=""><cite>John Benson</cite></a></td>
+		<th class="width-min">License</th>
+		<td></td>
+	  </tr>
+	</table>
+	
+	
+	
+	<nav>
+	  <nav>
+  <ul>
+	
+	  <li><a href="/">Home</a></li>
+	
+	  <li><a href="/arcade/">Arcade</a></li>
+	
+	  <li><a href="/tools/">Tools and Resources</a></li>
+	
+  </ul>
+</nav>
+
+	</nav>
+	
+
+  </header>
+
+  <main>
+	
+  <h2 id="introduction">Introduction</h2>
+<p><a href="https://github.com/jur1st/EMC-2">Find the data on Github</a></p>
+<p>Hey there, and welcome to the EMC-2 Sample Dataset, a little project I&rsquo;ve been cooking up to scratch an itch that&rsquo;s been bugging me (and probably you) for well over a decade.</p>
+<p>I&rsquo;ve been in the litigation and eDiscovery trenches since passing the bar, and in all that time, I&rsquo;ve never come across a public dataset that really hits the spot for testing, demoing, or just playing around with eDiscovery and digital forensics tools. Sure, we&rsquo;ve all used the Enron set, but let&rsquo;s be real - it&rsquo;s showing its age, and we&rsquo;re all a bit tired of it. (Pour one out for Andy Zipper.)</p>
+<p>So, I decided to create something new. Something that tells a story. Something that&rsquo;s manageable, yet complex enough to be interesting. And yeah, something that&rsquo;s actually kind of fun to work with. Welcome to the Ellingson Mineral Company (EMC-2) dataset.</p>
+<hr>
+<h2 id="why-emc-2">Why EMC-2?</h2>
+<p>Look, we all know the Enron dataset. It&rsquo;s been the workhorse of eDiscovery for years. But here&rsquo;s the thing - our tools have evolved, our needs have changed, and frankly, we deserve better source material. Here&rsquo;s why EMC-2 might just be the refresh you&rsquo;ve been waiting for:</p>
+<ol>
+<li>It tells a story: Unlike the Enron emails, which can feel like reading someone else&rsquo;s grocery lists out of context, EMC-2 has a narrative. You can actually follow what&rsquo;s going on, which makes it great for testing tools that need to piece together a coherent timeline or spot key events.</li>
+<li>It&rsquo;s manageable: At around 200 documents, it&rsquo;s big enough to be meaningful but small enough that you can actually review it yourself. Perfect for comparing your work to what your shiny new AI tool spits out.</li>
+<li>It&rsquo;s got range: Emails, sure, but also chat logs, voicemails, and more. Because modern investigations aren&rsquo;t just about emails anymore.</li>
+<li>It&rsquo;s synthetic: No ethical quandaries about using real people&rsquo;s private data. Analyze away without worry.</li>
+<li>It&rsquo;s got easter eggs: There might be a prize in it for you if you dig deep enough. Just saying.</li>
+</ol>
+<h2 id="dataset-contents">Dataset Contents</h2>
+<hr>
+<p>Alright, let&rsquo;s break down what you&rsquo;re getting in this digital goodie bag:</p>
+<p>Here&rsquo;s the information organized into a two-column markdown table:</p>
+<table>
+<thead>
+<tr>
+<th>CUSTODIANS</th>
+<th>DOCUMENT TYPES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hal Benson (CEO)</td>
+<td>Emails (with attachments, because who doesn&rsquo;t love attachments?)</td>
+</tr>
+<tr>
+<td>Dr. Sarah Chen</td>
+<td>Internal memos and reports</td>
+</tr>
+<tr>
+<td>Eugene Belford</td>
+<td>Chat logs</td>
+</tr>
+<tr>
+<td>Dade Murphy</td>
+<td>Voicemail transcripts</td>
+</tr>
+<tr>
+<td>Margo Wallace</td>
+<td>Press releases</td>
+</tr>
+<tr>
+<td>Kate Libby</td>
+<td>News articles</td>
+</tr>
+<tr>
+<td>Richard Gill</td>
+<td>Technical specs</td>
+</tr>
+<tr>
+<td>Jennifer Mack</td>
+<td>Financial spreadsheets</td>
+</tr>
+<tr>
+<td>jur1st</td>
+<td>Code snippets</td>
+</tr>
+<tr>
+<td></td>
+<td>System logs</td>
+</tr>
+</tbody>
+</table>
+<p>Note: I&rsquo;ve maintained the order of the custodians and document types as they were presented in the original text. The last document type (System logs) doesn&rsquo;t have a corresponding custodian since there were more document types than custodians in the original list.</p>
+<p>The whole shebang spans from about October 15 to October 25, 1995. Why 1995? Let&rsquo;s just say I might have been inspired by a certain movie. But don&rsquo;t worry, you don&rsquo;t need to know the film to appreciate the dataset. It&rsquo;s a self-contained story of corporate shenanigans, cyber threats, and the digital equivalent of &ldquo;who dunnit?&rdquo;</p>
+<h2 id="how-to-use-this-data">How to Use This Data</h2>
+<p>The envisioned use is to take the data, feed it through the data analysis tool of your choice, and then play with it. I&rsquo;ve processed the full set without processing errors, although there are a couple of files which may appear corrupt or strange.</p>
+<h2 id="what-kind-of-things-are-inside-the-data">What Kind of Things are Inside the Data?</h2>
+<p>At the most basic level, this might be one of the most bizarre expressions of what I suppose is categorized as fan fiction of sorts but expressed through the most soul-crushing medium imaginable&hellip;someone else&rsquo;s email. Think of it as a short story told in a non-traditional medium if nothing else, and you don&rsquo;t need to know a darn thing about the movie to find it a quick, compelling, and dense narrative to pull facts and details from.</p>
+<p>There are references and easter eggs that were intentional and unintentional. There&rsquo;s also something of a golden ticket that&rsquo;s stored inside here. If you find it, you let me know, and you may be immortalized on a wall of fame. First come, first served. In-person turn-ins might receive prizes and certainly will receive a high five.</p>
+<h2 id="limitations-and-known-issues">Limitations and Known Issues</h2>
+<ul>
+<li>This is a small set of documents (at this point), so it&rsquo;s probably not suited for much extrapolation of a predictive model at scale. If it is, someone&rsquo;s welcome to correct me, but making something that is statistically defensible is not the intention.</li>
+<li>The types of native files currently are limited to plain text, though that also remains the current state of the art for most legal-specific tools I&rsquo;ve taken a look at so far.</li>
+<li>Metadata for CSV and TXT documents presently have no time metadata, which impacts the set&rsquo;s ability to sort chronologically within days.</li>
+<li>While this got seeded with things from the movie, this is not and isn&rsquo;t intended to be some kind of detailed stand-in. We get broad arcs, main characters, motivations, that kind of thing.</li>
+</ul>
+<h2 id="technical-details">Technical Details</h2>
+<p>The dataset was implemented using a combination of human creativity and AI assistance:</p>
+<ul>
+<li>Initial taxonomies of different elements of the universe that exists in the seminal 1995 film, Hackers, at first as kind of a gag. Then the results started coming out and things escalated to sciencey things quickly.</li>
+<li>AI models were used to expand on these outlines, generating consistent and varied content.</li>
+<li>Human review and editing ensured quality, coherence, and adherence to the storyline.</li>
+<li>Technical details (e.g., code snippets, log files) were double-checked for accuracy along the way.</li>
+</ul>
+<p>This hybrid approach allowed us to create a dataset that combines the creativity and nuance of human-generated content with the scale and consistency made possible by AI.</p>
+<p>This hybrid approach allowed us to create a dataset that combines the creativity and nuance of human-generated content with the scale and consistency made possible by AI.</p>
+<h2 id="dataset-contents-1">Dataset Contents</h2>
+<p>The Ellingson Mineral Company Synthetic Dataset comprises a rich tapestry of documents that tell the story of a corporate cyber attack and its aftermath. Here&rsquo;s an overview of what you&rsquo;ll find:</p>
+<h3 id="timeline">Timeline</h3>
+<p>The main events of the dataset span from approximately October 15 to October 25, 1995, with some documents providing background context from earlier dates.</p>
+<h3 id="key-themes">Key Themes</h3>
+<ol>
+<li>Corporate espionage and insider threats</li>
+<li>Cybersecurity and hacking</li>
+<li>Financial fraud</li>
+<li>Legal and ethical dilemmas</li>
+<li>Media relations and crisis management</li>
+</ol>
+<h3 id="sample-document-email-from-the-plague">Sample Document: Email from The Plague</h3>
+<pre>
+┌──────────────────────────────────────────────────────────────────────────┐
+│Message 1/1                                                               │
+│Date: Tue, 10 Oct 1995 15:20:10 -0400                                     │
+│From: eugene.belford@offshore-secure.net                                  │
+│To: margo.wallace@ellingson.com                                           │
+│Subject: It's Time                                                        │
+│                                                                          │
+│M,                                                                        │
+│                                                                          │
+│I've submitted my resignation. Two weeks from now, we'll be sipping       │
+│mai tais on a beach while Ellingson burns. Make sure everything is in     │
+│place on your end.                                                        │
+│                                                                          │
+│Remember, if anyone gets suspicious, you know nothing. As far as          │
+│you're concerned, I'm leaving for a better opportunity elsewhere.         │
+│                                                                          │
+│- E                                                                       │
+│                                                                          │
+│                                                                          │
+│? Help      < MsgIndex P PrevMsg   - PrevPage D Delete   R Reply          │
+│O OTHER CMDS> ViewAttch N NextMsg Spc NextPage U Undelete F Forward       │
+└──────────────────────────────────────────────────────────────────────────┘
+
+
+</pre>
+<p>This email exemplifies the type of incriminating evidence hidden within the dataset, challenging users to uncover key information amidst a sea of routine corporate communications.</p>
+<h2 id="technical-specifications">Technical Specifications</h2>
+<p>The Ellingson Mineral Company Synthetic Dataset is designed to be compatible with a wide range of eDiscovery and analysis tools. Here are the key technical details:</p>
+<h3 id="file-formats">File Formats</h3>
+<ul>
+<li>Emails:  mbox files split per custodian</li>
+<li>Attachments: .txt, .csv</li>
+<li>Standalone documents: .txt, .csv</li>
+</ul>
+<h3 id="metadata">Metadata</h3>
+<p>Each email includes standard metadata fields and is known to thread properly:</p>
+<ul>
+<li>Date Created</li>
+<li>Date Modified</li>
+<li>Author</li>
+<li>Recipients (for emails)</li>
+<li>Subject (for emails)</li>
+<li>File Size</li>
+<li>File Type</li>
+</ul>
+<h3 id="dataset-size">Dataset Size</h3>
+<ul>
+<li>Total Documents: Approximately 200</li>
+<li>Total Size: Approximately 200kb. Yeah, you read that correctly. Can we go back to using Pine for email now?</li>
+</ul>
+<hr>
+<h3 id="contents">CONTENTS</h3>
+<pre tabindex="0"><code>EMC-2/
+├── LICENSE.txt
+├── README.txt
+├── edocs
+│   ├── Da_Vinci_virus_analys.txt
+│   ├── budget.csv
+│   ├── da_vinci_vir_core.c.txt
+│   ├── diff.txt
+│   ├── gibson_security_patch.txt
+│   ├── hacker_chatlog.txt
+│   ├── irc_htp.txt
+│   ├── memo_10101995.txt
+│   ├── nytimes_article_ellingson_hack.txt
+│   ├── plague_voicemail_transcript.txt
+│   ├── talk_log.txt
+│   ├── talk_log2.txt
+│   ├── traffic_report.txt
+│   ├── ts_phone_log.txt
+│   ├── virus_rpt_cyber.txt
+│   └── vm_0827.txt
+└── email
+  ├── DOJ_EmailFile.mbox
+  ├── dmurphy.mbox
+  ├── ebelford.mbox
+  ├── hbenson.mbox
+  ├── jmack.mbox
+  ├── jur1st.mbox
+  ├── klibby.mbox
+  ├── mwallace.mbox
+  ├── rgill.mbox
+  └── schen.mbox
+
+3 directories, 28 files
+</code></pre><hr>
+<h2 id="contact-info">Contact Info</h2>
+<p>If you enjoy this or find it useful, let me know by dropping me a line over email (john at john-benson dot com) and letting me know what you do with it. Heck if you want to take the concept and run with it on your own that&rsquo;s fine too. If nothing else this proves that there&rsquo;s no darn reason that we need search or summarize Andy Fastow&rsquo;s email or scratch your head Jeb(!)&rsquo;s use of &ldquo;FUP&rdquo; as an abbreviation for follow-up. To paraphrase the last best hope we had before this at solving this problem&hellip;please clap? 👏</p>
+
+
+  </main>
+
+  
+  <div class="debug-grid"></div>
+  <script src="/js/index.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.133.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GunnerBench</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  
+</head>
+<body>
+  <header>
+
+	
+	
+	<table class="header">
+	  <tr>
+		<td colspan="2" rowspan="2" class="width-auto">
+		  <h1 class="title">GunnerBench</h1>
+		  <span class="subtitle">A Framework for Evaluating AI in the Legal Domain</span>
+		</td>
+		<th>Version</th>
+		<td class="width-min">v0</td>
+	  </tr>
+	  <tr>
+		<th>Updated</th>
+		<td class="width-min"><time style="white-space: pre;">2024-08-31</time></td>
+	  </tr>
+	  <tr>
+		<th class="width-min">Author</th>
+		<td class="width-auto"><a href="https://john-benson.com"><cite>John Benson</cite></a></td>
+		<th class="width-min">License</th>
+		<td>CC-BY-4.0</td>
+	  </tr>
+	</table>
+	
+	
+	
+	<nav>
+	  <nav>
+  <ul>
+	
+	  <li><a href="/">Home</a></li>
+	
+	  <li><a href="/arcade/">Arcade</a></li>
+	
+	  <li><a href="/tools/">Tools and Resources</a></li>
+	
+  </ul>
+</nav>
+
+	</nav>
+	
+
+  </header>
+
+  <main>
+	
+  <p>GunnerBench is a novel benchmark system designed to evaluate the performance of large language models (LLMs) in legal applications. Unlike existing benchmarks that focus on academic metrics or general capabilities, GunnerBench adopts a practical, task-oriented approach inspired by capture-the-flag competitions.  By providing a clear scoring and tiering system, GunnerBench aims to empower legal professionals to make informed decisions about AI tool selection and implementation.</p>
+<p>I&rsquo;m keeping all of the <a href="https://field-fall-b93.notion.site/GunnerBench-3e0fe64fb8714eb383b03f620f9dd6e6">results, discussions, and the leaderboards over on my Notion instance.</a></p>
+<h2 id="introduction">Introduction</h2>
+<h3 id="background">Background</h3>
+<p>The rapid advancement of artificial intelligence, particularly in the domain of large language models, has sparked significant interest in their application to legal practice. While these models demonstrate impressive capabilities in general language tasks, their specific performance in complex legal scenarios remains understudied. Existing benchmarks often fail to capture the nuanced requirements of legal work, leaving a gap in our understanding of how these models might perform in real-world legal applications.</p>
+<h3 id="motivation-for-gunnerbench">Motivation for GunnerBench</h3>
+<p>GunnerBench emerges from the need for a specialized evaluation framework that addresses the unique challenges of legal AI. Traditional benchmarks, while valuable for general assessment, fall short in providing insights relevant to legal practitioners. GunnerBench aims to fill this gap by offering a comprehensive, task-oriented evaluation system that mirrors the complexities of legal work.</p>
+<p>The legal industry stands at a crossroads, with AI tools promising to revolutionize various aspects of practice. However, the adoption of these tools is hindered by uncertainty about their capabilities and limitations. GunnerBench seeks to provide clarity in this landscape, offering legal professionals a reliable means to assess and compare different AI models for specific legal tasks.</p>
+<h3 id="objectives-of-gunnerbench">Objectives of GunnerBench</h3>
+<ol>
+<li>Comprehensive Evaluation: GunnerBench aims to provide a holistic assessment of AI models across a wide range of legal tasks, from memo writing to document review and pleading analysis.</li>
+<li>Practical Insights: By focusing on task-oriented evaluations, GunnerBench seeks to offer actionable insights that can guide the selection and implementation of AI tools in legal practice.</li>
+<li>Informed Decision-Making: Through its scoring and tiering system, GunnerBench empowers legal professionals to make data-driven decisions about which AI models are best suited for their specific needs and budget constraints.</li>
+<li>Innovation Driver: Through transparent evaluation and leaderboard rankings, GunnerBench aims to spur innovation in legal AI development, challenging model creators to improve performance in specific legal domains.</li>
+<li>Ethical Considerations: GunnerBench incorporates ethical considerations into its design, addressing concerns about bias, privacy, and the appropriate use of AI in legal contexts.</li>
+<li>Accessibility: By providing clear, comparable results, GunnerBench aims to demystify legal AI capabilities for practitioners, researchers, and decision-makers in the legal industry.</li>
+</ol>
+<h2 id="methodology">Methodology</h2>
+<h3 id="benchmark-design-philosophy">Benchmark Design Philosophy</h3>
+<p>GunnerBench adopts a unique approach to AI evaluation, drawing inspiration from capture-the-flag competitions in cybersecurity. This framework emphasizes practical problem-solving and the ability to extract key information from complex legal scenarios. The benchmark is designed to challenge models not just on their general language capabilities, but on their ability to navigate the specific demands of legal tasks.</p>
+<p>Key principles of the GunnerBench design include:</p>
+<ol>
+<li>Task Orientation: Each evaluation category focuses on specific legal tasks, mirroring real-world applications of AI in law.</li>
+<li>Precision Focus: Models are evaluated on their ability to accurately extract and analyze relevant information from legal documents.</li>
+<li>Multifaceted Challenges: Assignments are designed to test various aspects of legal reasoning and analysis simultaneously.</li>
+<li>Ethical Awareness: The benchmark incorporates considerations of bias, fairness, and ethical use of AI in legal contexts.</li>
+<li>Practical Applicability: Results are presented in a way that directly informs decision-making in legal practice.</li>
+</ol>
+<h3 id="category-development">Category Development</h3>
+<p>GunnerBench categories are carefully crafted to cover a broad spectrum of legal tasks. The process of developing new categories involves:</p>
+<ol>
+<li>Identifying key areas of legal practice where AI could have significant impact</li>
+<li>Defining specific tasks and subtasks within each area</li>
+<li>Establishing clear evaluation criteria that reflect the nuances of the legal work involved</li>
+<li>Creating a scoring system that balances quantitative metrics with qualitative assessment</li>
+</ol>
+<p>Current categories include memo writing, document review, and pleading analysis, with plans to expand into additional areas of legal practice.</p>
+<h3 id="assignment-creation">Assignment Creation</h3>
+<p>Assignments within each category are designed to provide challenging, realistic scenarios that test the limits of AI capabilities in legal contexts. The assignment creation process involves:</p>
+<ol>
+<li>Developing synthetic legal documents and scenarios that mirror the complexity of real-world cases</li>
+<li>Creating comprehensive &ldquo;gold standard&rdquo; answers that serve as the benchmark for model performance</li>
+<li>Designing prompts that elicit specific types of legal analysis or information extraction</li>
+<li>Incorporating &ldquo;needles in haystacks&rdquo; - subtle details that require deep analysis to identify</li>
+</ol>
+<h3 id="scoring-and-tiering-system">Scoring and Tiering System</h3>
+<p>GunnerBench employs a nuanced scoring and tiering system designed to provide clear, actionable insights for legal professionals. This system is a cornerstone of GunnerBench&rsquo;s ability to inform decision-making in AI tool selection.</p>
+<h4 id="scoring-system">Scoring System</h4>
+<p>Each assignment uses a 100-point scoring system, typically broken down as follows:</p>
+<ul>
+<li>50 points for precision (accuracy of extracted information)</li>
+<li>50 points for recall (completeness of extracted information)</li>
+<li>Potential bonus points for identifying cross-domain legal issues or demonstrating exceptional insight</li>
+</ul>
+<p>This granular scoring allows for detailed comparison between models and helps identify specific strengths and weaknesses in different legal tasks.</p>
+<h4 id="tiering-system">Tiering System</h4>
+<p>Based on their performance across categories, models are assigned to tiers:</p>
+<ul>
+<li>S-Tier: Exceptional performance across most legal tasks</li>
+<li>A-Tier: Strong performance in many legal tasks</li>
+<li>B-Tier: Good performance in some legal tasks</li>
+<li>C-Tier: Adequate performance in basic legal tasks</li>
+</ul>
+<p>This tiering system provides a quick reference for overall model capability, allowing legal professionals to quickly narrow down their options based on their specific needs and budget constraints.</p>
+<h4 id="informing-decision-making">Informing Decision-Making</h4>
+<p>The combination of detailed scoring and clear tiering enables legal professionals to:</p>
+<ol>
+<li>Identify the most suitable models for specific legal tasks</li>
+<li>Understand the trade-offs between model performance and cost</li>
+<li>Make informed decisions about which AI tools to implement in their practice</li>
+<li>Set realistic expectations for AI performance in different legal scenarios</li>
+</ol>
+<p>By providing this level of detail and clarity, GunnerBench aims to bridge the gap between AI capabilities and practical implementation in legal settings.</p>
+<h3 id="model-evaluation-process">Model Evaluation Process</h3>
+<p>The evaluation process is designed to be consistent and fair across all models. Key steps include:</p>
+<ol>
+<li>Running each model against the same set of assignments using direct API access</li>
+<li>Collecting structured outputs based on carefully designed prompts</li>
+<li>Comparing model outputs against the gold standard answers</li>
+<li>Calculating precision and recall scores</li>
+<li>Aggregating scores across assignments to determine overall performance in each category and assign appropriate tiers</li>
+</ol>
+<p>This process ensures that all models are evaluated under the same conditions, allowing for meaningful comparisons of their capabilities in legal tasks. The results are then presented in a clear, accessible format that enables legal professionals to quickly assess which models might best suit their needs.</p>
+
+
+  </main>
+
+  
+  <div class="debug-grid"></div>
+  <script src="/js/index.js"></script>
+  
+</body>
+</html>

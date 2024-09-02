@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.133.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>About Darko Labs</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  
+</head>
+<body>
+  <header>
+
+	
+	
+	<table class="header">
+	  <tr>
+		<td colspan="2" rowspan="2" class="width-auto">
+		  <h1 class="title">About Darko Labs</h1>
+		  <span class="subtitle">Tech Notes</span>
+		</td>
+		<th>Version</th>
+		<td class="width-min">v0</td>
+	  </tr>
+	  <tr>
+		<th>Updated</th>
+		<td class="width-min"><time style="white-space: pre;">2024-08-31</time></td>
+	  </tr>
+	  <tr>
+		<th class="width-min">Author</th>
+		<td class="width-auto"><a href="https://john-benson.com"><cite>John Benson</cite></a></td>
+		<th class="width-min">License</th>
+		<td>CC-BY-4.0</td>
+	  </tr>
+	</table>
+	
+	
+	
+	<nav>
+	  <nav>
+  <ul>
+	
+	  <li><a href="/">Home</a></li>
+	
+	  <li><a href="/arcade/">Arcade</a></li>
+	
+	  <li><a href="/tools/">Tools and Resources</a></li>
+	
+  </ul>
+</nav>
+
+	</nav>
+	
+
+  </header>
+
+  <main>
+	
+<article>
+  <h2 id="design-philosophy">Design Philosophy</h2>
+<p>DarkoLabs embraces the constraints of monospace typography to create a unique, retro-futuristic aesthetic. Our design philosophy is built on the following principles:</p>
+<ol>
+<li>Embrace the Grid: Every character occupies the same space, creating a natural grid that guides our layouts.</li>
+<li>Simplicity in Complexity: Use basic elements to create complex designs.</li>
+<li>Function Informs Form: Let the content drive the design choices.</li>
+<li>Digital Nostalgia: Evoke the feeling of early computer interfaces while pushing the boundaries of modern web design.</li>
+</ol>
+<h2 id="general-principles">General Principles</h2>
+<ol>
+<li>Adhere to an 80-character line width maximum.</li>
+<li>Use ASCII art and box-drawing characters for visual elements.</li>
+<li>Prioritize semantic HTML with minimal custom classes.</li>
+<li>Maintain consistent spacing and alignment across all elements.</li>
+</ol>
+<h2 id="text-formatting">Text Formatting</h2>
+<h3 id="headings">Headings</h3>
+<ul>
+<li>Use Markdown headings (# for h1, ## for h2, etc.)</li>
+<li>Keep headings concise and under 80 characters</li>
+<li>Use Title Case for main headings, Sentence case for subheadings</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Main Page Title
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Section Subtitle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">### Subsection heading
+</span></span></span></code></pre></div><h3 id="paragraphs">Paragraphs</h3>
+<ul>
+<li>Wrap at 80 characters</li>
+<li>Use single line breaks between paragraphs</li>
+<li>Avoid indentation</li>
+</ul>
+<p>Good example:</p>
+<pre tabindex="0"><code>This is a paragraph that respects the 80-character limit. It wraps
+naturally and maintains readability.
+
+This is a second paragraph, separated by a single line break.
+</code></pre><p>Bad example:</p>
+<pre tabindex="0"><code>This paragraph ignores the 80-character limit and extends far beyond what is considered readable in our monospace design. It doesn&#39;t wrap and creates a horizontal scrollbar.
+
+   This paragraph is indented, which breaks the left alignment and disrupts the overall grid-based layout.
+</code></pre><h3 id="lists">Lists</h3>
+<ul>
+<li>Use Markdown syntax for unordered (-) and ordered (1.) lists</li>
+<li>Indent nested lists with 2 spaces</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Main item 1
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> Subitem 1.1
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> Subitem 1.2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Main item 2
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">1.</span> Ordered subitem 2.1
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">2.</span> Ordered subitem 2.2
+</span></span></code></pre></div><h3 id="code">Code</h3>
+<ul>
+<li>Use backticks for inline code: <code>code</code></li>
+<li>Use triple backticks for code blocks with language specification:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello_world</span>():
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;Hello, DarkoLabs!&#34;</span>)
+</span></span></code></pre></div><h3 id="links">Links</h3>
+<ul>
+<li>Use Markdown syntax: <a href="URL">Link Text</a></li>
+<li>For internal links, use relative paths: <a href="/about/">About</a></li>
+</ul>
+<h2 id="advanced-formatting">Advanced Formatting</h2>
+<h3 id="tables">Tables</h3>
+<ul>
+<li>Use Markdown tables</li>
+<li>Add class=&ldquo;width-min&rdquo; or class=&ldquo;width-auto&rdquo; to control column widths</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| Header 1 | Header 2 | Header 3 |
+</span></span><span style="display:flex;"><span>|:---------|:--------:|---------:|
+</span></span><span style="display:flex;"><span>| Left     | Center   | Right    |
+</span></span><span style="display:flex;"><span>{.width-auto}
+</span></span></code></pre></div><p>Rendered result:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Header 1</th>
+<th style="text-align:center">Header 2</th>
+<th style="text-align:right">Header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grid-layouts">Grid Layouts</h3>
+<ul>
+<li>Wrap elements in <div class="grid"> for grid layouts</li>
+<li>Use flexbox properties for fine-tuning</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grid&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;flex: 1;&#34;</span>&gt;Column 1 (flexible)&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;flex: 0 0 20ch;&#34;</span>&gt;Column 2 (fixed width)&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;flex: 2;&#34;</span>&gt;Column 3 (double width of Column 1)&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><h3 id="tree-structures">Tree Structures</h3>
+<ul>
+<li>Use HTML with the &ldquo;tree&rdquo; class</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tree&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">li</span>&gt;Root
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>	  &lt;<span style="color:#f92672">li</span>&gt;Branch 1
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>		  &lt;<span style="color:#f92672">li</span>&gt;Leaf 1.1&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>		  &lt;<span style="color:#f92672">li</span>&gt;Leaf 1.2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>		&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>	  &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>	  &lt;<span style="color:#f92672">li</span>&gt;Branch 2&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span></code></pre></div><p>Rendered result:</p>
+<ul class="tree">
+  <li>Root
+	<ul>
+	  <li>Branch 1
+		<ul>
+		  <li>Leaf 1.1</li>
+		  <li>Leaf 1.2</li>
+		</ul>
+	  </li>
+	  <li>Branch 2</li>
+	</ul>
+  </li>
+</ul>
+<h3 id="ascii-art-and-diagrams">ASCII Art and Diagrams</h3>
+<ul>
+<li>Use <pre> tags for ASCII art and diagrams</li>
+<li>Use HTML entities for box-drawing characters</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">pre</span>&gt;
+</span></span><span style="display:flex;"><span>┌───────────────────┐
+</span></span><span style="display:flex;"><span>│   DarkoLabs Box   │
+</span></span><span style="display:flex;"><span>├───────────────────┤
+</span></span><span style="display:flex;"><span>│ Content goes here │
+</span></span><span style="display:flex;"><span>└───────────────────┘
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">pre</span>&gt;
+</span></span></code></pre></div><p>Rendered result:</p>
+<pre>
+┌───────────────────┐
+│   DarkoLabs Box   │
+├───────────────────┤
+│ Content goes here │
+└───────────────────┘
+</pre>
+<h3 id="graphs-with-gradients">Graphs with Gradients</h3>
+<ul>
+<li>Use ASCII characters for gradient levels: ░ ▒ ▓ █</li>
+<li>Wrap in <pre class="ascii-graph"> tags</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">pre</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ascii-graph&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>DarkoLabs Growth
+</span></span><span style="display:flex;"><span>│                    
+</span></span><span style="display:flex;"><span>│               ▓▓▓  
+</span></span><span style="display:flex;"><span>│          ▓▓▓  ▒▒▒  
+</span></span><span style="display:flex;"><span>│     ▓▓▓  ▒▒▒  ░░░  
+</span></span><span style="display:flex;"><span>│▓▓▓  ▒▒▒  ░░░  ░░░  
+</span></span><span style="display:flex;"><span>└─────────────────▶
+</span></span><span style="display:flex;"><span> 2021 2022 2023 2024
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">pre</span>&gt;
+</span></span></code></pre></div><h3 id="expandable-sections">Expandable Sections</h3>
+<ul>
+<li>Use HTML details/summary tags</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">details</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">summary</span>&gt;Click to expand&lt;/<span style="color:#f92672">summary</span>&gt;
+</span></span><span style="display:flex;"><span>This content is hidden until the user clicks to expand it.
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">details</span>&gt;
+</span></span></code></pre></div><h2 id="creating-cohesive-designs">Creating Cohesive Designs</h2>
+<p>To maintain a consistent look and feel across your DarkoLabs project:</p>
+<ol>
+<li>Use a consistent header and footer structure on all pages.</li>
+<li>Create a set of reusable ASCII art components for icons and decorations.</li>
+<li>Maintain a consistent rhythm with your use of headings, paragraphs, and whitespace.</li>
+<li>Develop a color scheme using ASCII shading characters and apply it consistently.</li>
+</ol>
+<p>Example of a consistent page structure:</p>
+<pre tabindex="0"><code>┌────────────────────────────────────────────────────────────────────────────┐
+│ DarkoLabs                                                                  │
+├────────────────────────────────────────────────────────────────────────────┤
+│ [Home] [About] [Projects] [Contact]                                        │
+├────────────────────────────────────────────────────────────────────────────┤
+│                                                                            │
+│ # Page Title                                                               │
+│                                                                            │
+│ Main content goes here...                                                  │
+│                                                                            │
+│ ## Section Heading                                                         │
+│                                                                            │
+│ More content...                                                            │
+│                                                                            │
+├────────────────────────────────────────────────────────────────────────────┤
+│ © 2024 DarkoLabs | Privacy Policy | Terms of Service                       │
+└────────────────────────────────────────────────────────────────────────────┘
+</code></pre><h2 id="accessibility-considerations">Accessibility Considerations</h2>
+<p>While the monospace aesthetic is core to DarkoLabs design, it&rsquo;s important to ensure our content remains accessible:</p>
+<ol>
+<li>Provide text alternatives for ASCII art and diagrams.</li>
+<li>Ensure sufficient color contrast for readability.</li>
+<li>Use semantic HTML to improve screen reader compatibility.</li>
+<li>Test navigation and interaction using only a keyboard.</li>
+<li>Consider providing a &lsquo;readability mode&rsquo; that uses a proportional font for long-form content.</li>
+</ol>
+<h2 id="adapting-for-different-content">Adapting for Different Content</h2>
+<p>The DarkoLabs monospace design can be adapted for various content types:</p>
+<ul>
+<li>Long-form articles: Use clear heading hierarchy and generous white space to improve readability.</li>
+<li>Data-heavy content: Leverage ASCII tables and graphs for clear data presentation.</li>
+<li>Portfolio sites: Use ASCII art frames to showcase images or project thumbnails.</li>
+<li>Documentation: Combine expandable sections with tree structures for easy navigation.</li>
+</ul>
+<h2 id="future-considerations">Future Considerations</h2>
+<p>As web technologies evolve, consider how the DarkoLabs design might adapt:</p>
+<ol>
+<li>Explore using CSS Grid for more complex layouts while maintaining the monospace aesthetic.</li>
+<li>Investigate WebGL or Canvas for creating more dynamic ASCII art experiences.</li>
+<li>Consider developing custom web fonts for more consistent rendering across devices.</li>
+<li>Explore ways to incorporate responsive design principles without breaking the monospace grid.</li>
+</ol>
+<h2 id="polishing-checklist">Polishing Checklist</h2>
+<ol>
+<li>Ensure all text fits within 80 characters width</li>
+<li>Convert any complex layouts to appropriate HTML with correct classes</li>
+<li>Replace standard dashes/lines with box-drawing characters in diagrams</li>
+<li>Verify all ASCII art and diagrams use consistent characters</li>
+<li>Check that all expandable sections use details/summary tags</li>
+<li>Ensure all tables have appropriate width classes</li>
+<li>Verify that all code blocks specify the language for syntax highlighting</li>
+<li>Check that all links are functional and use relative paths for internal links</li>
+<li>Ensure front matter is complete and accurate</li>
+<li>Verify that any images have descriptive alt text</li>
+<li>Run the content through a Markdown linter to catch any syntax issues</li>
+<li>Review the overall layout for consistency with the monospace grid</li>
+<li>Check that all custom classes (e.g., &rsquo;tree&rsquo;, &lsquo;grid&rsquo;) are used appropriately</li>
+<li>Ensure all ASCII graphs use the correct gradient characters</li>
+<li>Verify that no standard HTML elements break the monospace layout</li>
+<li>Check for consistent use of ASCII art components across pages</li>
+<li>Verify that the page structure follows the established template</li>
+<li>Ensure consistent use of whitespace and line breaks for readability</li>
+<li>Review headings for proper hierarchy and consistent styling</li>
+<li>Check that all interactive elements (e.g., expandable sections) are working correctly</li>
+</ol>
+
+</article>
+
+  </main>
+
+  
+  <div class="debug-grid"></div>
+  <script src="/js/index.js"></script>
+  
+</body>
+</html>

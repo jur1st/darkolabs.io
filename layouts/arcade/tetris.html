@@ -1,0 +1,248 @@
+{{ define "main" }}
+<div class="container">
+	{{ .Content }}
+	<div id="game-container">
+		<canvas id="tetris" width="240" height="400"></canvas>
+		<div class="grid">
+			<div id="score">Score: 0</div>
+			<div id="high-score">High Score: 0</div>
+		</div>
+		<div id="controls">
+			<span class="control-key">←→ Move</span>
+			<span class="control-key">↑ Rotate</span>
+			<span class="control-key">↓ Drop</span>
+		</div>
+		<div id="mobile-controls">
+			<button class="control-btn" id="left-btn">←</button>
+			<button class="control-btn" id="rotate-btn">↑</button>
+			<button class="control-btn" id="right-btn">→</button>
+			<button class="control-btn" id="drop-btn">↓</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	// (The JavaScript code remains unchanged)
+	const canvas = document.getElementById('tetris');
+	const context = canvas.getContext('2d');
+	const scoreElement = document.getElementById('score');
+	const highScoreElement = document.getElementById('high-score');
+
+	const ROWS = 20;
+	const COLS = 12;
+	const BLOCK_SIZE = 20;
+
+	let board = Array(ROWS).fill().map(() => Array(COLS).fill(0));
+	let score = 0;
+	let highScore = 0;
+
+	const SHAPES = [
+		[[1, 1, 1, 1]],
+		[[1, 1], [1, 1]],
+		[[1, 1, 1], [0, 1, 0]],
+		[[1, 1, 1], [1, 0, 0]],
+		[[1, 1, 1], [0, 0, 1]],
+		[[1, 1, 0], [0, 1, 1]],
+		[[0, 1, 1], [1, 1, 0]]
+	];
+
+	const COLORS = [
+		'var(--text-color)',
+		'var(--text-color-alt)',
+		'var(--text-color)',
+		'var(--text-color-alt)',
+		'var(--text-color)',
+		'var(--text-color-alt)',
+		'var(--text-color)'
+	];
+
+	let currentShape;
+	let currentColor;
+	let currentX;
+	let currentY;
+
+	function newShape() {
+		const randomIndex = Math.floor(Math.random() * SHAPES.length);
+		currentShape = SHAPES[randomIndex];
+		currentColor = COLORS[randomIndex];
+		currentX = Math.floor(COLS / 2) - Math.floor(currentShape[0].length / 2);
+		currentY = 0;
+
+		if (collision()) {
+			alert('Game Over!\nYour score: ' + score + '\nHigh Score: ' + highScore);
+			board = Array(ROWS).fill().map(() => Array(COLS).fill(0));
+			score = 0;
+			scoreElement.textContent = 'Score: ' + score;
+		}
+	}
+
+	function draw() {
+		context.fillStyle = 'var(--background-color)';
+		context.fillRect(0, 0, canvas.width, canvas.height);
+
+		drawBoard();
+		drawCurrentShape();
+		drawGrid();
+	}
+
+	const ASCII_BLOCKS = ['█', '▓', '▒', '░'];
+	
+	function drawCurrentShape() {
+		context.fillStyle = currentColor;
+		context.font = `${BLOCK_SIZE}px var(--font-family)`;
+		for (let y = 0; y < currentShape.length; y++) {
+			for (let x = 0; x < currentShape[y].length; x++) {
+				if (currentShape[y][x]) {
+					const char = ASCII_BLOCKS[Math.floor(Math.random() * ASCII_BLOCKS.length)];
+					context.fillText(char, (currentX + x) * BLOCK_SIZE, (currentY + y + 1) * BLOCK_SIZE);
+				}
+			}
+		}
+	}
+	
+	function drawBoard() {
+		context.font = `${BLOCK_SIZE}px var(--font-family)`;
+		for (let y = 0; y < ROWS; y++) {
+			for (let x = 0; x < COLS; x++) {
+				if (board[y][x]) {
+					context.fillStyle = board[y][x];
+					const char = ASCII_BLOCKS[Math.floor(Math.random() * ASCII_BLOCKS.length)];
+					context.fillText(char, x * BLOCK_SIZE, (y + 1) * BLOCK_SIZE);
+				}
+			}
+		}
+	}
+
+
+	function drawGrid() {
+		context.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+		context.lineWidth = 0.5;
+		for (let y = 0; y <= ROWS; y++) {
+			context.beginPath();
+			context.moveTo(0, y * BLOCK_SIZE);
+			context.lineTo(canvas.width, y * BLOCK_SIZE);
+			context.stroke();
+		}
+		for (let x = 0; x <= COLS; x++) {
+			context.beginPath();
+			context.moveTo(x * BLOCK_SIZE, 0);
+			context.lineTo(x * BLOCK_SIZE, canvas.height);
+			context.stroke();
+		}
+	}
+
+	function addGlow(ctx, x, y, width, height, color) {
+		ctx.shadowColor = color;
+		ctx.shadowBlur = 10;
+		ctx.fillRect(x, y, width, height);
+		ctx.shadowBlur = 0;
+	}
+
+	function collision() {
+		for (let y = 0; y < currentShape.length; y++) {
+			for (let x = 0; x < currentShape[y].length; x++) {
+				if (currentShape[y][x] &&
+					(board[currentY + y] === undefined ||
+					 board[currentY + y][currentX + x] === undefined ||
+					 board[currentY + y][currentX + x])) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	function merge() {
+		for (let y = 0; y < currentShape.length; y++) {
+			for (let x = 0; x < currentShape[y].length; x++) {
+				if (currentShape[y][x]) {
+					board[currentY + y][currentX + x] = currentColor;
+				}
+			}
+		}
+	}
+
+	function rotate() {
+		const rotated = currentShape[0].map((_, i) => currentShape.map(row => row[i])).reverse();
+		const previousShape = currentShape;
+		currentShape = rotated;
+		if (collision()) {
+			currentShape = previousShape;
+		}
+	}
+
+	function moveDown() {
+		currentY++;
+		if (collision()) {
+			currentY--;
+			merge();
+			removeFullRows();
+			newShape();
+		}
+	}
+
+	function moveLeft() {
+		currentX--;
+		if (collision()) {
+			currentX++;
+		}
+	}
+
+	function moveRight() {
+		currentX++;
+		if (collision()) {
+			currentX--;
+		}
+	}
+
+	function removeFullRows() {
+		for (let y = ROWS - 1; y >= 0; y--) {
+			if (board[y].every(cell => cell !== 0)) {
+				board.splice(y, 1);
+				board.unshift(Array(COLS).fill(0));
+				score += 10;
+				if (score > highScore) {
+					highScore = score;
+					highScoreElement.textContent = 'High Score: ' + highScore;
+				}
+				scoreElement.textContent = 'Score: ' + score;
+			}
+		}
+	}
+
+	document.addEventListener('keydown', handleKeyPress);
+
+	function handleKeyPress(event) {
+		switch(event.keyCode) {
+			case 37: // Left arrow
+				moveLeft();
+				break;
+			case 39: // Right arrow
+				moveRight();
+				break;
+			case 40: // Down arrow
+				moveDown();
+				break;
+			case 38: // Up arrow
+				rotate();
+				break;
+		}
+		draw();
+	}
+
+	// Mobile controls
+	document.getElementById('left-btn').addEventListener('touchstart', moveLeft);
+	document.getElementById('right-btn').addEventListener('touchstart', moveRight);
+	document.getElementById('rotate-btn').addEventListener('touchstart', rotate);
+	document.getElementById('drop-btn').addEventListener('touchstart', moveDown);
+
+	newShape();
+	setInterval(() => {
+		moveDown();
+		draw();
+	}, 500);
+
+	draw();
+</script>
+
+{{ end }}
