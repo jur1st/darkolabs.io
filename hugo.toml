@@ -42,7 +42,7 @@ title = 'Darko Labs'
 	  parent ="Tools and Resources"
 	  weight = 10
 	[[menu.main]]
-	  name = "Think Hard Prompt"
+	  name = "The Thinking Hard Prompt"
 	  url = "/tools/think/"
 	  parent ="Tools and Resources"
 	  weight = 18

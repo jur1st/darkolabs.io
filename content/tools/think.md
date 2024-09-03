@@ -12,7 +12,7 @@ license: "CC-BY-4.0"
 
 Use this prompt to increase the effectiveness of an LLM's output. Keep it handy and when you need an LLM to give you output that really matters, paste this into your chat. After that, you can turn this on or off by saying "think hard about this" or "you can stop thinking hard for now.."
 
-Optimized for Claude but works fine as-is for ChatGPT. 
+You'll find versions optimized for use with both Claude and GPT-4o below. 
 
 ---
 
