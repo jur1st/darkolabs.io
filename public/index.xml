@@ -41,7 +41,7 @@
       <link>http://192.168.1.206:1313/tools/think/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://192.168.1.206:1313/tools/think/</guid>
-      <description>About Use this prompt to increase the effectiveness of an LLM&amp;rsquo;s output. Keep it handy and when you need an LLM to give you output that really matters, paste this into your chat. After that, you can turn this on or off by saying &amp;ldquo;think hard about this&amp;rdquo; or &amp;ldquo;you can stop thinking hard for now..&amp;rdquo;&#xA;Optimized for Claude but works fine as-is for ChatGPT.&#xA;&amp;lt;thinking_hard&amp;gt;&#xA;For challenging questions or tasks, apprach them by thinking hard and thinking step by step.</description>
+      <description>About Use this prompt to increase the effectiveness of an LLM&amp;rsquo;s output. Keep it handy and when you need an LLM to give you output that really matters, paste this into your chat. After that, you can turn this on or off by saying &amp;ldquo;think hard about this&amp;rdquo; or &amp;ldquo;you can stop thinking hard for now..&amp;rdquo;&#xA;Optimized for Claude but works fine as-is for ChatGPT.&#xA;Claude Optimized &amp;lt;thinking_hard&amp;gt;&#xA;For challenging questions or tasks, apprach them by thinking hard and thinking step by step.</description>
     </item>
   </channel>
 </rss>
