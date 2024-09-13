@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="Hugo 0.133.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>EMC-2 Major Event Timeline</title>
+  <title>EMC-2 Sample Data Set</title>
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/index.css" />
   
@@ -17,11 +17,11 @@
 	<table class="header">
 	  <tr>
 		<td colspan="2" rowspan="2" class="width-auto">
-		  <h1 class="title">EMC-2 Major Event Timeline</h1>
+		  <h1 class="title">EMC-2 Sample Data Set</h1>
 		  <span class="subtitle">A synthetic, narrative-driven alternative to Enron data</span>
 		</td>
 		<th>Version</th>
-		<td class="width-min">v1</td>
+		<td class="width-min">v1.1</td>
 	  </tr>
 	  <tr>
 		<th>Updated</th>
@@ -217,41 +217,70 @@
 <li>Total Size: Approximately 200kb. Yeah, you read that correctly. Can we go back to using Pine for email now?</li>
 </ul>
 <hr>
-<h3 id="contents">CONTENTS</h3>
-<pre tabindex="0"><code>EMC-2/
-├── LICENSE.txt
-├── README.txt
-├── edocs
-│   ├── Da_Vinci_virus_analys.txt
-│   ├── budget.csv
-│   ├── da_vinci_vir_core.c.txt
-│   ├── diff.txt
-│   ├── gibson_security_patch.txt
-│   ├── hacker_chatlog.txt
-│   ├── irc_htp.txt
-│   ├── memo_10101995.txt
-│   ├── nytimes_article_ellingson_hack.txt
-│   ├── plague_voicemail_transcript.txt
-│   ├── talk_log.txt
-│   ├── talk_log2.txt
-│   ├── traffic_report.txt
-│   ├── ts_phone_log.txt
-│   ├── virus_rpt_cyber.txt
-│   └── vm_0827.txt
-└── email
-  ├── DOJ_EmailFile.mbox
-  ├── dmurphy.mbox
-  ├── ebelford.mbox
-  ├── hbenson.mbox
-  ├── jmack.mbox
-  ├── jur1st.mbox
-  ├── klibby.mbox
-  ├── mwallace.mbox
-  ├── rgill.mbox
-  └── schen.mbox
+<h3 id="contents">Contents</h3>
+<pre tabindex="0"><code>.
+├── CITATION.MD
+├── Custodians
+│   ├── Belford, Eugene
+│   │   └── ebelford.mbox
+│   ├── Benson, Hal
+│   │   └── hbenson.mbox
+│   ├── Chen, Sarah
+│   │   └── schen.mbox
+│   ├── Gill, Richard
+│   │   └── rgill.mbox
+│   ├── Libby, Kate
+│   │   └── klibby.mbox
+│   ├── Mack, Jennifer
+│   │   └── jmack.mbox
+│   ├── Murphy, Dade
+│   │   └── dmurphy.mbox
+│   ├── Rivera, Alex
+│   │   └── Rivera, Alex.mbox
+│   ├── US-DOJ
+│   │   ├── DOJ_EmailFile.mbox
+│   │   └── edocs.zip
+│   ├── Wallace, Margo
+│   │   └── mwallace.mbox
+│   └── jur1st
+│       └── jur1st.mbox
+├── LICENSE.md
+├── README.md
+└── edocs_unzipped_metadata_bonked
+  ├── Da_Vinci_virus_analys.txt
+  ├── HCaul_Cover_Letter.txt
+  ├── HCaul_skytel_19951022.csv
+  ├── HCaul_skytel_19951022.txt
+  ├── budget.csv
+  ├── da_vinci_vir_core.c.txt
+  ├── da_vinci_virus_core.c.txt
+  ├── diff.txt
+  ├── gibson_security_patch.txt
+  ├── hacker_chatlog.txt
+  ├── irc_htp.txt
+  ├── irc_htp2.txt
+  ├── memo_10101995.txt
+  ├── nytimes_article_ellingson_hack.txt
+  ├── plague_voicemail_transcript.txt
+  ├── talk_log.txt
+  ├── talk_log2.txt
+  ├── traffic_report.txt
+  ├── ts_phone_log.txt
+  ├── virus_rpt_cyber.txt
+  └── vm_0827.txt
 
-3 directories, 28 files
-</code></pre><hr>
+14 directories, 36 files
+</code></pre><h2 id="changes">Changes</h2>
+<p>2024-09-06 - Post release changes in advance of the Stanford Hackathon</p>
+<ul>
+<li>Added some additional short messaging data that should parse to RSMF with some creativity and research into what you&rsquo;ve stumbled across.</li>
+<li>Brought dates within the data set into alignment to ensure the timeline of events is cohesive.</li>
+<li>Manually set the MAC times for all of the loose files to ensure a cohesive timeline.</li>
+<li>Added additional context to certain threads. The timeline of events and certainly the document count overall feels good but the next step will be injecting targeted flags and events into this set.</li>
+<li>Fixed a handful of parsing errors in the file attachments. Statistics now post-deduplication is around 204 to 205 depending on how aggressively suspicious systems are of C code living in a plain text file. If AV pops on the extraction of the file you&rsquo;ll know because only zero bytes will be seen when the agent rolls around to picking it up. <em>cough</em> better logging here from certain platforms here would be swell.</li>
+<li>This is an opinion change on my part&hellip;I had said that this wasn&rsquo;t a good test set for benchmarking performance. After testing and debugging the set a few times this is a <em>fantastic</em> set if you need to see how quickly a processing system will churn through a tiny data set.</li>
+</ul>
+<hr>
 <h2 id="contact-info">Contact Info</h2>
 <p>If you enjoy this or find it useful, let me know by dropping me a line over email (john at john-benson dot com) and letting me know what you do with it. Heck if you want to take the concept and run with it on your own that&rsquo;s fine too. If nothing else this proves that there&rsquo;s no darn reason that we need search or summarize Andy Fastow&rsquo;s email or scratch your head Jeb(!)&rsquo;s use of &ldquo;FUP&rdquo; as an abbreviation for follow-up. To paraphrase the last best hope we had before this at solving this problem&hellip;please clap? 👏</p>
 

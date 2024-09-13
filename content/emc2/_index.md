@@ -1,12 +1,12 @@
 ---
-title: EMC-2 Major Event Timeline
+title: EMC-2 Sample Data Set
 subtitle: A synthetic, narrative-driven alternative to Enron data
 author: John Benson
 author-url: "https:john-benson.com"
 date: 2024-09-12
 lang: en
 toc-title: Contents
-version: v1
+version: v1.1
 ---
 ## Introduction
 
@@ -161,44 +161,76 @@ Each email includes standard metadata fields and is known to thread properly:
 
 
 ---
-### CONTENTS
+
+### Contents
 
 ```
-EMC-2/
-├── LICENSE.txt
-├── README.txt
-├── edocs
-│   ├── Da_Vinci_virus_analys.txt
-│   ├── budget.csv
-│   ├── da_vinci_vir_core.c.txt
-│   ├── diff.txt
-│   ├── gibson_security_patch.txt
-│   ├── hacker_chatlog.txt
-│   ├── irc_htp.txt
-│   ├── memo_10101995.txt
-│   ├── nytimes_article_ellingson_hack.txt
-│   ├── plague_voicemail_transcript.txt
-│   ├── talk_log.txt
-│   ├── talk_log2.txt
-│   ├── traffic_report.txt
-│   ├── ts_phone_log.txt
-│   ├── virus_rpt_cyber.txt
-│   └── vm_0827.txt
-└── email
-  ├── DOJ_EmailFile.mbox
-  ├── dmurphy.mbox
-  ├── ebelford.mbox
-  ├── hbenson.mbox
-  ├── jmack.mbox
-  ├── jur1st.mbox
-  ├── klibby.mbox
-  ├── mwallace.mbox
-  ├── rgill.mbox
-  └── schen.mbox
+.
+├── CITATION.MD
+├── Custodians
+│   ├── Belford, Eugene
+│   │   └── ebelford.mbox
+│   ├── Benson, Hal
+│   │   └── hbenson.mbox
+│   ├── Chen, Sarah
+│   │   └── schen.mbox
+│   ├── Gill, Richard
+│   │   └── rgill.mbox
+│   ├── Libby, Kate
+│   │   └── klibby.mbox
+│   ├── Mack, Jennifer
+│   │   └── jmack.mbox
+│   ├── Murphy, Dade
+│   │   └── dmurphy.mbox
+│   ├── Rivera, Alex
+│   │   └── Rivera, Alex.mbox
+│   ├── US-DOJ
+│   │   ├── DOJ_EmailFile.mbox
+│   │   └── edocs.zip
+│   ├── Wallace, Margo
+│   │   └── mwallace.mbox
+│   └── jur1st
+│       └── jur1st.mbox
+├── LICENSE.md
+├── README.md
+└── edocs_unzipped_metadata_bonked
+  ├── Da_Vinci_virus_analys.txt
+  ├── HCaul_Cover_Letter.txt
+  ├── HCaul_skytel_19951022.csv
+  ├── HCaul_skytel_19951022.txt
+  ├── budget.csv
+  ├── da_vinci_vir_core.c.txt
+  ├── da_vinci_virus_core.c.txt
+  ├── diff.txt
+  ├── gibson_security_patch.txt
+  ├── hacker_chatlog.txt
+  ├── irc_htp.txt
+  ├── irc_htp2.txt
+  ├── memo_10101995.txt
+  ├── nytimes_article_ellingson_hack.txt
+  ├── plague_voicemail_transcript.txt
+  ├── talk_log.txt
+  ├── talk_log2.txt
+  ├── traffic_report.txt
+  ├── ts_phone_log.txt
+  ├── virus_rpt_cyber.txt
+  └── vm_0827.txt
 
-3 directories, 28 files
+14 directories, 36 files
+
 
 ```
+
+## Changes
+
+2024-09-06 - Post release changes in advance of the Stanford Hackathon
+- Added some additional short messaging data that should parse to RSMF with some creativity and research into what you've stumbled across. 
+- Brought dates within the data set into alignment to ensure the timeline of events is cohesive.
+- Manually set the MAC times for all of the loose files to ensure a cohesive timeline. 
+- Added additional context to certain threads. The timeline of events and certainly the document count overall feels good but the next step will be injecting targeted flags and events into this set.
+- Fixed a handful of parsing errors in the file attachments. Statistics now post-deduplication is around 204 to 205 depending on how aggressively suspicious systems are of C code living in a plain text file. If AV pops on the extraction of the file you'll know because only zero bytes will be seen when the agent rolls around to picking it up. *cough* better logging here from certain platforms here would be swell.
+- This is an opinion change on my part...I had said that this wasn't a good test set for benchmarking performance. After testing and debugging the set a few times this is a *fantastic* set if you need to see how quickly a processing system will churn through a tiny data set. 
+
 ---
 
 ## Contact Info
