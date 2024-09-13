@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>EMC-2 Sample Dataset on Darko Labs</title>
-    <link>http://192.168.1.206:1313/emc2/</link>
-    <description>Recent content in EMC-2 Sample Dataset on Darko Labs</description>
+    <title>EMC-2 Major Event Timeline on Darko Labs</title>
+    <link>http://localhost:1313/emc2/</link>
+    <description>Recent content in EMC-2 Major Event Timeline on Darko Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://192.168.1.206:1313/emc2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/emc2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EMC-2 Timeline</title>
+      <link>http://localhost:1313/emc2/timeline/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/emc2/timeline/</guid>
+      <description>┌────────────────────────────────────────────────────────────────────────────┐ │ ELLINGSON MINERAL COMPANY CYBER INCIDENT │ │ TIMELINE OF EVENTS │ ├────────────────────────────────────────────────────────────────────────────┤ │ │ │ KEY: ┌──────┐ Major Event ┌······┐ Hacker Activity │ │ │■■■■■■│ │::::::│ │ │ └──────┘ └······┘ │ │ ┌──────┐ Company Action ┌══════┐ Investigation/Legal │ │ │//////│ │██████│ │ │ └──────┘ └══════┘ │ │ │ │ AUG 17 ┌······┐ │ │ 1995 │::::::│ Belford sends encrypted email to Phantom Phreak │ │ └······┘ │ │ │ │ OCT 10 ┌──────┐ │ │ 1995 │//////│ Eugene Belford submits resignation │ │ └──────┘ │ │ │ │ OCT 19 ┌──────┐ ┌──────┐ ┌//////┐ │ │ 1995 │■■■■■■│ │■■■■■■│ │//////│ Da Vinci virus activates │ │ └──────┘ │■■■■■■│ │//////│ Sarah Chen detects breach │ │ │■■■■■■│ │//////│ Hal Benson calls emergency board meeting│ │ └──────┘ └//////┘ │ │ │ │ OCT 20 ┌══════┐ ┌──────┐ │ │ 1995 │██████│ │■■■■■■│ FBI officially opens investigation │ │ │██████│ │■■■■■■│ Sarah Chen completes initial virus analysis │ │ └══════┘ └──────┘ │ │ │ │ OCT 21 ┌······┐ ┌──────┐ ┌//////┐ │ │ 1995 │::::::│ │■■■■■■│ │//////│ Young hackers broadcast message on TV │ │ │::::::│ │■■■■■■│ │//////│ Margo Wallace goes on &amp;#34;personal leave&amp;#34; │ │ │::::::│ │■■■■■■│ │//////│ Sarah Chen finds evidence against Belford │ └······┘ └──────┘ └//////┘ │ │ │ │ OCT 22 ┌······┐ ┌//////┐ ┌//////┐ │ │ 1995 │::::::│ │//////│ │//////│ Sarah Chen reaches out to young hackers │ │ │::::::│ │//////│ │//////│ Paul &amp;amp; Tim (IT staff) resign │ │ │::::::│ │//////│ │//////│ New security protocols implemented │ │ └······┘ └//////┘ └//////┘ │ │ │ │ OCT 23 ┌······┐ ┌══════┐ │ │ 1995 │::::::│ │██████│ Young hackers start working with Ellingson │ │ │::::::│ │██████│ FBI Agent Gill requests transfer │ │ └······┘ └══════┘ │ │ │ │ OCT 24 ┌──────┐ │ │ 1995 │■■■■■■│ Global financial markets disrupted │ │ └──────┘ │ │ │ │ OCT 26 ┌──────┐ │ │ 1995 │//////│ Final incident report submitted │ │ └──────┘ │ │ │ │ ┌─────────────────┐ │ │ PLAGUE DEFEATED │■■■■■■■■■■■■■■■■■│ │ │ └─────────────────┘ │ └────────────────────────────────────────────────────────────────────────────┘ </description>
+    </item>
   </channel>
 </rss>

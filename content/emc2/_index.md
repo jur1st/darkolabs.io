@@ -1,9 +1,9 @@
 ---
-title: EMC-2 Sample Dataset
+title: EMC-2 Major Event Timeline
 subtitle: A synthetic, narrative-driven alternative to Enron data
 author: John Benson
 author-url: "https:john-benson.com"
-date: 2024-08-31
+date: 2024-09-12
 lang: en
 toc-title: Contents
 version: v1

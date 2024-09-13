@@ -37,6 +37,11 @@ title = 'Darko Labs'
 	  parent ="Tools and Resources"
 	  weight = 5
 	[[menu.main]]
+		name = "EMC2 Timeline"
+		url = "/emc2/timeline/"
+		parent ="Tools and Resources"
+		weight = 5
+	[[menu.main]]
 	  name = "Gunnerbench"
 	  url = "/gunnerbench/"
 	  parent ="Tools and Resources"

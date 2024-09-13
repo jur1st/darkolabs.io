@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to darkolabs.io on Darko Labs</title>
-    <link>http://192.168.1.206:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Welcome to darkolabs.io on Darko Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.206:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EMC-2 Timeline</title>
+      <link>http://localhost:1313/emc2/timeline/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/emc2/timeline/</guid>
+      <description>┌────────────────────────────────────────────────────────────────────────────┐ │ ELLINGSON MINERAL COMPANY CYBER INCIDENT │ │ TIMELINE OF EVENTS │ ├────────────────────────────────────────────────────────────────────────────┤ │ │ │ KEY: ┌──────┐ Major Event ┌······┐ Hacker Activity │ │ │■■■■■■│ │::::::│ │ │ └──────┘ └······┘ │ │ ┌──────┐ Company Action ┌══════┐ Investigation/Legal │ │ │//////│ │██████│ │ │ └──────┘ └══════┘ │ │ │ │ AUG 17 ┌······┐ │ │ 1995 │::::::│ Belford sends encrypted email to Phantom Phreak │ │ └······┘ │ │ │ │ OCT 10 ┌──────┐ │ │ 1995 │//////│ Eugene Belford submits resignation │ │ └──────┘ │ │ │ │ OCT 19 ┌──────┐ ┌──────┐ ┌//////┐ │ │ 1995 │■■■■■■│ │■■■■■■│ │//////│ Da Vinci virus activates │ │ └──────┘ │■■■■■■│ │//////│ Sarah Chen detects breach │ │ │■■■■■■│ │//////│ Hal Benson calls emergency board meeting│ │ └──────┘ └//////┘ │ │ │ │ OCT 20 ┌══════┐ ┌──────┐ │ │ 1995 │██████│ │■■■■■■│ FBI officially opens investigation │ │ │██████│ │■■■■■■│ Sarah Chen completes initial virus analysis │ │ └══════┘ └──────┘ │ │ │ │ OCT 21 ┌······┐ ┌──────┐ ┌//////┐ │ │ 1995 │::::::│ │■■■■■■│ │//////│ Young hackers broadcast message on TV │ │ │::::::│ │■■■■■■│ │//////│ Margo Wallace goes on &amp;#34;personal leave&amp;#34; │ │ │::::::│ │■■■■■■│ │//////│ Sarah Chen finds evidence against Belford │ └······┘ └──────┘ └//////┘ │ │ │ │ OCT 22 ┌······┐ ┌//////┐ ┌//////┐ │ │ 1995 │::::::│ │//////│ │//////│ Sarah Chen reaches out to young hackers │ │ │::::::│ │//////│ │//////│ Paul &amp;amp; Tim (IT staff) resign │ │ │::::::│ │//////│ │//////│ New security protocols implemented │ │ └······┘ └//////┘ └//////┘ │ │ │ │ OCT 23 ┌······┐ ┌══════┐ │ │ 1995 │::::::│ │██████│ Young hackers start working with Ellingson │ │ │::::::│ │██████│ FBI Agent Gill requests transfer │ │ └······┘ └══════┘ │ │ │ │ OCT 24 ┌──────┐ │ │ 1995 │■■■■■■│ Global financial markets disrupted │ │ └──────┘ │ │ │ │ OCT 26 ┌──────┐ │ │ 1995 │//////│ Final incident report submitted │ │ └──────┘ │ │ │ │ ┌─────────────────┐ │ │ PLAGUE DEFEATED │■■■■■■■■■■■■■■■■■│ │ │ └─────────────────┘ │ └────────────────────────────────────────────────────────────────────────────┘ </description>
+    </item>
     <item>
       <title>About Darko Labs</title>
-      <link>http://192.168.1.206:1313/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>Design Philosophy DarkoLabs embraces the constraints of monospace typography to create a unique, retro-futuristic aesthetic. Our design philosophy is built on the following principles:&#xA;Embrace the Grid: Every character occupies the same space, creating a natural grid that guides our layouts. Simplicity in Complexity: Use basic elements to create complex designs. Function Informs Form: Let the content drive the design choices. Digital Nostalgia: Evoke the feeling of early computer interfaces while pushing the boundaries of modern web design.</description>
     </item>
     <item>
       <title>Darko Labs Not Tetris</title>
-      <link>http://192.168.1.206:1313/arcade/tetris/</link>
+      <link>http://localhost:1313/arcade/tetris/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/arcade/tetris/</guid>
+      <guid>http://localhost:1313/arcade/tetris/</guid>
       <description> The week that Claude 3.5 was released and it introduced the artifacts feature, I built a web based version of tetris while waiting for someone to call me back.&#xA;You can play the working version here..&#xA;┌────────────────┐ │ ▓▓ │ │ ▓▓▓▓ │ │ ▓▓ │ │ │ │ ░░ │ │ ░░░░ │ │ │ │ ██ │ │ ██ │ │ │ │ ▒▒ │ │ ▒▒▒▒ │ │ │ │ ░░░░ ▓▓▓▓ ████ │ │ ░░░░ ▓▓▓▓ ████ │ └────────────────┘ SCORE 0 HIGH 0 ←→ ↑ ↓ </description>
     </item>
     <item>
       <title>Darko Labs Term Surrounder</title>
-      <link>http://192.168.1.206:1313/tools/ts/</link>
+      <link>http://localhost:1313/tools/ts/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/tools/ts/</guid>
+      <guid>http://localhost:1313/tools/ts/</guid>
       <description>Term Surrounder Easily surround each line of your search terms with quotes. Perfect for preparing precise search queries. Paste your terms (one per line), click to add quotes, and copy the result. All processing happens in your browser - no data is transferred.&#xA;Surround with Quotes Copy to Clipboard </description>
     </item>
     <item>
       <title>EMC-2 Capture the Flag</title>
-      <link>http://192.168.1.206:1313/arcade/ctf0/</link>
+      <link>http://localhost:1313/arcade/ctf0/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/arcade/ctf0/</guid>
+      <guid>http://localhost:1313/arcade/ctf0/</guid>
       <description></description>
     </item>
     <item>
       <title>Thinking Hard</title>
-      <link>http://192.168.1.206:1313/tools/think/</link>
+      <link>http://localhost:1313/tools/think/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/tools/think/</guid>
+      <guid>http://localhost:1313/tools/think/</guid>
       <description>About Use this prompt to increase the effectiveness of an LLM&amp;rsquo;s output. Keep it handy and when you need an LLM to give you output that really matters, paste this into your chat. After that, you can turn this on or off by saying &amp;ldquo;think hard about this&amp;rdquo; or &amp;ldquo;you can stop thinking hard for now..&amp;rdquo;&#xA;You&amp;rsquo;ll find versions optimized for use with both Claude and GPT-4o below.&#xA;Claude Optimized &amp;lt;thinking_hard&amp;gt;</description>
     </item>
   </channel>

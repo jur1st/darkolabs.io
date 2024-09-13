@@ -2,38 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.1.206:1313/about/</loc>
+    <loc>http://localhost:1313/emc2/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/arcade/</loc>
+    <loc>http://localhost:1313/arcade/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/arcade/tetris/</loc>
+    <loc>http://localhost:1313/arcade/tetris/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/tools/ts/</loc>
+    <loc>http://localhost:1313/tools/ts/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/tools/</loc>
+    <loc>http://localhost:1313/tools/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/arcade/ctf0/</loc>
+    <loc>http://localhost:1313/arcade/ctf0/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/emc2/</loc>
+    <loc>http://localhost:1313/emc2/timeline/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/gunnerbench/</loc>
+    <loc>http://localhost:1313/gunnerbench/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/tools/think/</loc>
+    <loc>http://localhost:1313/tools/think/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.1.206:1313/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://192.168.1.206:1313/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

@@ -55,7 +55,7 @@ body {
   width: 100%;
   margin: 0;
   padding: var(--line-height) 2ch;
-  max-width: calc(min(80ch, round(down, 100%, 1ch)));
+  max-width: calc(min(84ch, round(down, 100%, 1ch))); /* Increased from 80ch to 84ch */
   line-height: var(--line-height);
   overflow-x: hidden;
 }
@@ -227,7 +227,12 @@ pre {
   overflow-x: auto;
   margin: var(--line-height) 0;
   overflow-y: hidden;
+  padding: 0 1ch;
+  width: calc(100% + 2ch); /* Adjusted to slightly overflow its container */
+  position: relative;
+  left: -1ch; /* Pull the pre element slightly to the left */
 }
+
 figure pre {
   margin: 0;
 }
@@ -241,7 +246,7 @@ code {
 }
 
 figure {
-  margin: calc(var(--line-height) * 2) 3ch;
+  margin: calc(var(--line-height) * 2) 1ch; /* Reduced side margins */
   overflow-x: auto;
   overflow-y: hidden;
 }

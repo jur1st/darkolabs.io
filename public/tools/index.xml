@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Darko Labs Tools and Resources on Darko Labs</title>
-    <link>http://192.168.1.206:1313/tools/</link>
+    <link>http://localhost:1313/tools/</link>
     <description>Recent content in Darko Labs Tools and Resources on Darko Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.206:1313/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Darko Labs Term Surrounder</title>
-      <link>http://192.168.1.206:1313/tools/ts/</link>
+      <link>http://localhost:1313/tools/ts/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/tools/ts/</guid>
+      <guid>http://localhost:1313/tools/ts/</guid>
       <description>Term Surrounder Easily surround each line of your search terms with quotes. Perfect for preparing precise search queries. Paste your terms (one per line), click to add quotes, and copy the result. All processing happens in your browser - no data is transferred.&#xA;Surround with Quotes Copy to Clipboard </description>
     </item>
     <item>
       <title>Thinking Hard</title>
-      <link>http://192.168.1.206:1313/tools/think/</link>
+      <link>http://localhost:1313/tools/think/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.206:1313/tools/think/</guid>
+      <guid>http://localhost:1313/tools/think/</guid>
       <description>About Use this prompt to increase the effectiveness of an LLM&amp;rsquo;s output. Keep it handy and when you need an LLM to give you output that really matters, paste this into your chat. After that, you can turn this on or off by saying &amp;ldquo;think hard about this&amp;rdquo; or &amp;ldquo;you can stop thinking hard for now..&amp;rdquo;&#xA;You&amp;rsquo;ll find versions optimized for use with both Claude and GPT-4o below.&#xA;Claude Optimized &amp;lt;thinking_hard&amp;gt;</description>
     </item>
   </channel>
