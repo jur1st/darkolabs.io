@@ -9,6 +9,13 @@
     <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>EMC-2 Sample Data Set</title>
+      <link>http://localhost:1313/emc2/timeline-interactive/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/emc2/timeline-interactive/</guid>
+      <description>EMC-2 Interactive Timeline Filters All Participants All Event Types Apply Date Filter Reset Filters Event Details </description>
+    </item>
+    <item>
       <title>EMC-2 Timeline</title>
       <link>http://localhost:1313/emc2/timeline-gpt4o1/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
