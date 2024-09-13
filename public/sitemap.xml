@@ -5,7 +5,10 @@
     <loc>http://localhost:1313/emc2/</loc>
     <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/emc2/timeline/</loc>
+    <loc>http://localhost:1313/emc2/timeline-gpt4o1/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/emc2/timeline-sonnet-35/</loc>
     <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>

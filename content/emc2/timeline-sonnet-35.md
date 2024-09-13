@@ -1,6 +1,6 @@
 ---
 title: EMC-2 Timeline
-subtitle: A rough timeline of events depicted in the EMC-2 Data Set
+subtitle: A timeline of events from the EMC-2 Set created by Claude 3.5 Sonnet
 author: John Benson
 author-url: "https:john-benson.com"
 date: 2024-09-12
@@ -9,7 +9,9 @@ toc-title: Contents
 version: v1
 ---
 
-A rough timeline of events depicted in the [Darko Labs Data Set](https://darkolabs.io/emc2) .
+A rough timeline of events depicted in the [Darko Labs Data Set](https://darkolabs.io/emc2).
+Compare to the output of [[GPT 4o1 2024-09-13](https://darkolabs.io/emc2/timeline-gpt4o1/).
+
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
