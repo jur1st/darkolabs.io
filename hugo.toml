@@ -43,6 +43,7 @@ title = 'Darko Labs'
 		weight = 5
 	[[menu.main]]
 		name = "EMC2 Timeline - GPT-4o1"
+		url = "/emc2/timeline-gpt4o1/"
 		parent ="Tools and Resources"
 		weight = 5
 	[[menu.main]]
