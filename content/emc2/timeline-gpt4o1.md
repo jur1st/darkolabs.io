@@ -11,6 +11,7 @@ version: v1
 
 A rough timeline of events depicted in the [Darko Labs Data Set](https://darkolabs.io/emc2).
 Compare to the output of [[Claude Sonnet 3.5](https://darkolabs.io/emc2/timeline-sonnet-35/).
+An interactive timeline can be found at [https://darkolabs.io/emc2/timeline-interactive/](https://darkolabs.io/emc2/timeline-interactive/) 
 
 # Ellingson Cyber Attack Timeline
 

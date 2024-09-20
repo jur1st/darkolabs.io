@@ -13,7 +13,7 @@
       <link>http://localhost:1313/arcade/tetris/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/arcade/tetris/</guid>
-      <description> The week that Claude 3.5 was released and it introduced the artifacts feature, I built a web based version of tetris while waiting for someone to call me back.&#xA;You can play the working version here..&#xA;┌────────────────┐ │ ▓▓ │ │ ▓▓▓▓ │ │ ▓▓ │ │ │ │ ░░ │ │ ░░░░ │ │ │ │ ██ │ │ ██ │ │ │ │ ▒▒ │ │ ▒▒▒▒ │ │ │ │ ░░░░ ▓▓▓▓ ████ │ │ ░░░░ ▓▓▓▓ ████ │ └────────────────┘ SCORE 0 HIGH 0 ←→ ↑ ↓ </description>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;The week that Claude 3.5 was released and it introduced the artifacts feature, I built a web based version of tetris while waiting for someone to call me back.&lt;/p&gt;&#xA;&lt;p&gt;You can play the &lt;a href=&#34;https://darkolabs.io/darko-tetris&#34;&gt;working version here&lt;/a&gt;..&lt;/p&gt;&#xA;&lt;pre&gt;&#xA;&#x9;┌────────────────┐&#xA;&#x9;│ ▓▓             │&#xA;&#x9;│ ▓▓▓▓           │&#xA;&#x9;│ ▓▓             │&#xA;&#x9;│                │&#xA;&#x9;│         ░░     │&#xA;&#x9;│         ░░░░   │&#xA;&#x9;│                │&#xA;&#x9;│     ██         │&#xA;&#x9;│     ██         │&#xA;&#x9;│                │&#xA;&#x9;│            ▒▒  │&#xA;&#x9;│          ▒▒▒▒  │&#xA;&#x9;│                │&#xA;&#x9;│ ░░░░ ▓▓▓▓ ████ │&#xA;&#x9;│ ░░░░ ▓▓▓▓ ████ │&#xA;&#x9;└────────────────┘&#xA;&#x9; SCORE 0  HIGH 0&#xA;&#x9; ←→ ↑ ↓&#xA;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>EMC-2 Capture the Flag</title>
