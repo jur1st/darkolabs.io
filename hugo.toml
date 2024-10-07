@@ -23,48 +23,52 @@ title = 'Darko Labs'
 	  weight = 10
 	  parent="Arcade"
 	[[menu.main]]
-		name = "EMC2-CTF-0"
-		url = "/arcade/ctf0"
-		weight = 20
-		parent="Arcade"
-	[[menu.main]]
-	  name = "Tools and Resources"
+	  name = "Tools"
 	  url = "/tools/"
 	  weight = 6
 	[[menu.main]]
+	  name = "Resources"
+	  url = "/tools/"
+	  weight = 7
+	[[menu.main]]
 	  name = "EMC2"
 	  url = "/emc2/"
-	  parent ="Tools and Resources"
+	  parent ="Resources"
 	  weight = 5
 	[[menu.main]]
 		name = "EMC2 Timeline - Sonnet 3.5"
 		url = "/emc2/timeline-sonnet-35/"
-		parent ="Tools and Resources"
+		parent ="Resources"
 		weight = 5
 	[[menu.main]]
 		name = "EMC2 Timeline - GPT-4o1"
 		url = "/emc2/timeline-gpt4o1/"
-		parent ="Tools and Resources"
+		parent ="Resources"
 		weight = 5
 	[[menu.main]]
 		name = "EMC2 Timeline - Interactive"
 		url = "/emc2/timeline-interactive/"
-		parent ="Tools and Resources"
+		parent ="Resources"
 		weight = 5
 	[[menu.main]]
 	  name = "Gunnerbench"
 	  url = "/gunnerbench/"
-	  parent ="Tools and Resources"
+	  parent ="Resources"
 	  weight = 10
 	[[menu.main]]
 	  name = "The Thinking Hard Prompt"
 	  url = "/tools/think/"
-	  parent ="Tools and Resources"
+	  parent ="Tools"
 	  weight = 18
+	 [[menu.main]]
+	   name = "The Shrodinger Syndicate"
+	   url = "/tools/shrodinger/"
+	   parent ="Tools"
+	   weight = 19 
 	[[menu.main]]
 	  name = "Term Surrounder"
 	  url = "/tools/ts/"
-	  parent ="Tools and Resources"
+	  parent ="Tools"
 	  weight = 20
 	 
 

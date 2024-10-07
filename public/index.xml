@@ -6,8 +6,15 @@
     <description>Recent content in Welcome to darkolabs.io on Darko Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shrodinger Syndicate</title>
+      <link>http://localhost:1313/tools/shrodinger/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tools/shrodinger/</guid>
+      <description>&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;p&gt;There&amp;rsquo;s a lot going on here. Maybe too much? This prompt combines work done by @paranoid/dayman and @1984 who created the first really effective chain of thought and panel of experts prompts with a little of my own work to give the experts specify tools and processes to work with. The reasoning library portion can be removed in whole so that the prompt can work in smaller system prompts, context windows, or models.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>EMC-2 Sample Data Set</title>
       <link>http://localhost:1313/emc2/timeline-interactive/</link>
@@ -49,13 +56,6 @@
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tools/ts/</guid>
       <description>&lt;h1 id=&#34;term-surrounder&#34;&gt;Term Surrounder&lt;/h1&gt;&#xA;&lt;p&gt;Easily surround each line of your search terms with quotes. Perfect for preparing precise search queries. Paste your terms (one per line), click to add quotes, and copy the result. All processing happens in your browser - no data is transferred.&lt;/p&gt;&#xA;&lt;div class=&#34;container fade-in&#34;&gt;&#xA;&#x9;&lt;textarea id=&#34;input&#34; placeholder=&#34;Paste your search terms here, one per line...&#34;&gt;&lt;/textarea&gt;&#xA;&#x9;&lt;div class=&#34;button-group&#34;&gt;&#xA;&#x9;&#x9;&lt;button onclick=&#34;processText()&#34;&gt;Surround with Quotes&lt;/button&gt;&#xA;&#x9;&#x9;&lt;button onclick=&#34;copyToClipboard()&#34;&gt;Copy to Clipboard&lt;/button&gt;&#xA;&#x9;&lt;/div&gt;&#xA;&#x9;&lt;textarea id=&#34;output&#34; readonly&gt;&lt;/textarea&gt;&#xA;&#x9;&lt;div id=&#34;stats&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;&#x9;function processText() {&#xA;&#x9;&#x9;const input = document.getElementById(&#39;input&#39;).value;&#xA;&#x9;&#x9;const lines = input.split(&#39;\n&#39;);&#xA;&#x9;&#x9;const processedLines = lines.map(line =&gt; `&#34;${line.trim()}&#34;`);&#xA;&#x9;&#x9;const output = processedLines.join(&#39;\n&#39;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;document.getElementById(&#39;output&#39;).value = output;&#xA;&#x9;&#x9;updateStats(lines.length, processedLines.length);&#xA;&#x9;}&#xA;&#xA;&#x9;function copyToClipboard() {&#xA;&#x9;&#x9;const output = document.getElementById(&#39;output&#39;);&#xA;&#x9;&#x9;output.select();&#xA;&#x9;&#x9;document.execCommand(&#39;copy&#39;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;const button = event.target;&#xA;&#x9;&#x9;const originalText = button.textContent;&#xA;&#x9;&#x9;button.textContent = &#39;Copied!&#39;;&#xA;&#x9;&#x9;button.style.backgroundColor = &#39;#2ecc71&#39;;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTimeout(() =&gt; {&#xA;&#x9;&#x9;&#x9;button.textContent = originalText;&#xA;&#x9;&#x9;&#x9;button.style.backgroundColor = &#39;&#39;;&#xA;&#x9;&#x9;}, 2000);&#xA;&#x9;}&#xA;&#xA;&#x9;function updateStats(inputLines, outputLines) {&#xA;&#x9;&#x9;const stats = document.getElementById(&#39;stats&#39;);&#xA;&#x9;&#x9;stats.innerHTML = `&#xA;&#x9;&#x9;&#x9;&lt;strong&gt;Input terms:&lt;/strong&gt; ${inputLines}&#xA;&#x9;&#x9;&#x9;&amp;nbsp;|&amp;nbsp;&#xA;&#x9;&#x9;&#x9;&lt;strong&gt;Output terms:&lt;/strong&gt; ${outputLines}&#xA;&#x9;&#x9;`;&#xA;&#x9;&#x9;stats.classList.add(&#39;fade-in&#39;);&#xA;&#x9;&#x9;setTimeout(() =&gt; stats.classList.remove(&#39;fade-in&#39;), 500);&#xA;&#x9;}&#xA;&lt;/script&gt;</description>
-    </item>
-    <item>
-      <title>EMC-2 Capture the Flag</title>
-      <link>http://localhost:1313/arcade/ctf0/</link>
-      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/arcade/ctf0/</guid>
-      <description></description>
     </item>
     <item>
       <title>Thinking Hard</title>

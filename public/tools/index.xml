@@ -6,8 +6,15 @@
     <description>Recent content in Darko Labs Tools and Resources on Darko Labs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shrodinger Syndicate</title>
+      <link>http://localhost:1313/tools/shrodinger/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tools/shrodinger/</guid>
+      <description>&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;p&gt;There&amp;rsquo;s a lot going on here. Maybe too much? This prompt combines work done by @paranoid/dayman and @1984 who created the first really effective chain of thought and panel of experts prompts with a little of my own work to give the experts specify tools and processes to work with. The reasoning library portion can be removed in whole so that the prompt can work in smaller system prompts, context windows, or models.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Darko Labs Term Surrounder</title>
       <link>http://localhost:1313/tools/ts/</link>
